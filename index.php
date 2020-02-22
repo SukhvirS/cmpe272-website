@@ -7,7 +7,7 @@
     <title>Sukhvir Singh's Website</title>
 </head>
 <body>
-    <h1>Sukhvir Singh</h1>
+    <h1>Sukhvir Singh - CMPE 272</h1>
     <p>This website is running on a Digital Ocean droplet with a LAMP architecture (Linux, Apache, MySQL, PHP). </p>
     <p>You can access phpmyadmin at <a href="/phpmyadmin">sukhvir-singh.com/phpmyadmin</a></p>
     <p>This website has also been secured with SSL certificates.</p>
