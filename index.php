@@ -12,7 +12,7 @@
     <p>You can access phpmyadmin at <a href="/phpmyadmin">sukhvir-singh.com/phpmyadmin</a></p>
     <p>This website has also been secured with SSL certificates.</p>
     <?php
-        echo("testing php");
+        echo("This line is printed using php to show that php works");
     ?>
 </body>
 </html>
