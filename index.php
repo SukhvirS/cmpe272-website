@@ -10,10 +10,10 @@
     <h1>Sukhvir Singh</h1>
     <div class="topnav">
         <a href="#">Home</a>
-        <a href='./products'>Products</a>
-        <a href="./news">News</a>
-        <a href="./contacts">Contact</a>
-        <a href="./about">About</a>
+        <a href='products.html'>Products</a>
+        <a href="news.html">News</a>
+        <a href="contacts.html">Contact</a>
+        <a href="about.html">About</a>
     </div>
     <p>This website is running on a Digital Ocean droplet with a LAMP architecture (Linux, Apache, MySQL, PHP). </p>
     <p>You can access phpmyadmin at <a href="/phpmyadmin">sukhvir-singh.com/phpmyadmin</a></p>
