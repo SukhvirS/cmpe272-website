@@ -43,7 +43,7 @@
 
           while(!feof($file)){
             echo fgets($file);
-            echo "\r\n";
+            echo nl2br("\n");
           }
           fclose($file);
         ?>
