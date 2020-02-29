@@ -27,7 +27,7 @@ nav h1{
 
 @media (max-width: 800px) {
     .home-body p{
-        padding: 40px 0 30px 0;
+        padding: 40px 0 15px 0;
         margin: 4vw;
         font-size: 30px;
     }
