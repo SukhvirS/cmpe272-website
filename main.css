@@ -17,5 +17,11 @@ nav h1{
 
 .home-body{
     text-align: center;
-    font-size: 10vw;
+    font-size: 4vw;
+}
+
+@media (max-width: 800px) {
+    .home-body p{
+        font-size: 40px;
+    }
 }
