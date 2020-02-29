@@ -11,14 +11,14 @@
     <title>Contacts</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <h1>The Phone Company</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
@@ -39,17 +39,19 @@
     </nav>
     <div>
         <h2>Contacts</h2>
-        <ul class="list-group list-group-flush">
-          <?php
-            $file = file('all_contacts.txt');
-            for($x = 0; $x < count($file); $x++){
-              echo('<li class="list-group-item">');
-              echo(($x+1).'. ');
-              echo($file[$x]);
-              echo('</li>');
-            }
-          ?>
-        </ul>
+        <div style="float:">
+          <ul class="list-group list-group-flush">
+            <?php
+              $file = file('all_contacts.txt');
+              for($x = 0; $x < count($file); $x++){
+                echo('<li class="list-group-item">');
+                echo(($x+1).'. ');
+                echo($file[$x]);
+                echo('</li>');
+              }
+            ?>
+          </ul>
+        </div>
 
 
     </div>
