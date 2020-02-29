@@ -43,6 +43,7 @@
 
           while(!feof($file)){
             echo fgets($file);
+            echo "\r\n";
           }
           fclose($file);
         ?>
