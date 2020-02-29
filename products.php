@@ -23,13 +23,13 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="products.html">Products</a>
+              <a class="nav-link active" href="products.php">Products</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="news.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contacts.php">Contacts</a>
+              <a class="nav-link" href="contacts.php">Contacts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -39,7 +39,24 @@
     </nav>
 
     <div>
-        <h2>Products</h2>
+      <h2>Products</h2>
+      <div class='flex-container'>
+        <?php
+          $products = file('all_products.txt');
+          for($x = 0; $x < count($products); $x++){
+            echo(' 
+              <div class="card" style="width: 18rem; margin:8px 6px">
+                <img src="'.$products[$x+1].'" alt="..." width="100px" style="display: block; margin: 20px auto 0 auto">
+                <div class="card-body">
+                  <h5 class="card-title">'.$products[$x].'</h5>
+                  <a href="#" class="btn btn-primary">'.$products[$x+2].'</a>
+                </div>
+              </div>
+            ');
+            $x = $x+2;
+          }
+        ?>
+      </div>
     </div> 
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
