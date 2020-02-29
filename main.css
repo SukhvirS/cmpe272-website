@@ -1,26 +1,20 @@
-/* .navbar-brand{
-    padding-left: 16px;
-} */
-
-.jumbotron{
-    height:100vh;
-    
+body{
+    padding: 0 5vw;
 }
 
-/* .jumbotron h2{
-    margin-top: -40px;
+nav ul{
+    padding-right: 50px;
 }
-
-.navbar-collapse{
-    padding-left: 16px;
-} */
 
 .active{
-    border-bottom: 2px solid dodgerblue;
+    border-bottom: 2px solid black;
 }
 
 nav h1{
     padding: 10px 40px 0 0;
-    font-family: Comfortaa;
     font-size: 25px;
+}
+
+.home-body{
+    text-align: center;
 }
