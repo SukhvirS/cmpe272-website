@@ -32,7 +32,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
-              </li>
+            </li>
           </ul>
         </div>
     </nav>
@@ -40,7 +40,10 @@
         <h2>Contacts</h2>
         <?php
           $file = fopen("all_contacts.txt","r");
-          echo fgets($file);
+
+          while(!feof($file)){
+            echo fgets($file);
+          }
           fclose($file);
         ?>
 
