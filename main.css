@@ -17,11 +17,18 @@ nav h1{
 
 .home-body{
     text-align: center;
-    font-size: 4vw;
+}
+
+.home-body p{
+    padding: 80px 0px 50px 0;
+    margin: 0 15vw;
+    font-size: 4vw;;
 }
 
 @media (max-width: 800px) {
     .home-body p{
+        padding: 40px 0 30px 0;
+        margin: 4vw;
         font-size: 30px;
     }
 }
