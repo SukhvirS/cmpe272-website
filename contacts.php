@@ -38,6 +38,12 @@
     </nav>
     <div class="jumbotron">
         <h2>Contacts</h2>
+        <?php
+          $file = fopen("all_contacts.txt","r");
+          echo fgets($file);
+          fclose($file);
+        ?>
+
 
     </div>
 
