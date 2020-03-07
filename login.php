@@ -99,6 +99,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Montserrat|Noto+Serif+TC|Playfair+Display|Questrial|Simonetta|Work+Sans&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="main.css">
 
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+    </style>
+
 </head>
 <body>
     <div class="wrapper">
