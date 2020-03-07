@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: contacts.php");
     exit;
 }
  
@@ -24,6 +24,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $username = trim($_POST["username"]);
     }
+
+    echo("POST: ".$_POST);
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
