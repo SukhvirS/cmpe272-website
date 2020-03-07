@@ -65,6 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
+                            echo("password has been verified");
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
