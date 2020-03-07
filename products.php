@@ -40,6 +40,9 @@
 
     <div>
       <h2>Products</h2>
+      <?php
+            echo(password_hash('admin123', PASSWORD_DEFAULT));
+      ?>
       <div class='flex-container'>
         <?php
           $products = file('all_products.txt');
