@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
  
-// Check if the user is already logged in, if yes then redirect him to welcome page
+// Check if the user is already logged in, if yes then redirect him to contacts page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: contacts.php");
     exit;

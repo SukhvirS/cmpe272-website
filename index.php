@@ -39,11 +39,10 @@
         </div>
 
         <?php
-          // Check if the user is logged in, if not then redirect him to login page
-          if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+          session_start();
 
-          }
-          else{
+          // Check if the user is already logged in, if yes then redirect him to contacts page
+          if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo('
               <form method="post"> 
                 <input type="submit" name="logout-button"
