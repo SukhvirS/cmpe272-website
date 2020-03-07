@@ -44,7 +44,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_username = $username;
-            echo("SQL stmt: ".$stmt."<br>");
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -57,7 +56,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
 
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
+                        $input_password_hashed = password_hash($password, PASSWORD_DEFAULT);
+                        if(password_verify($input_password_hashed, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
                             
