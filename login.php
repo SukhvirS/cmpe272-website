@@ -14,6 +14,7 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
+$hashed_password = '';
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -43,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_username = $username;
+            echo("SQL stmt: ".$sql."<br>");
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -53,7 +55,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
