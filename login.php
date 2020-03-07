@@ -25,7 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
     }
 
-    echo("POST: \r\n");
+    echo("user name:".$_POST['username']."\r\n");
+    echo("password:".$_POST['password']."\r\n");
     print_r($_POST);
     echo("---\r\n");
 
@@ -110,7 +111,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="wrapper">
         <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
