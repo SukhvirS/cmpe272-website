@@ -36,6 +36,41 @@
               </li>
             </ul>
           </div>
+
+          <?php
+          session_start();
+
+          // Check if the user is already logged in, if yes then redirect him to contacts page
+          if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+            echo('
+              <form method="post"> 
+                <input type="submit" name="logout-button"
+                        class="btn btn-outline-dark" value="Logout" /> 
+              </form> 
+                  
+            ');
+          }
+
+          function logout(){
+            // Initialize the session
+            session_start();
+            
+            // Unset all of the session variables
+            $_SESSION = array();
+            
+            // Destroy the session.
+            session_destroy();
+            
+            // Redirect to homepage
+            header("location: index.php");
+            exit;
+          }
+
+          if(array_key_exists('logout-button', $_POST)) { 
+            logout(); 
+          } 
+
+        ?>
     </nav>
     <div class='about-body'>
         <h2>About</h2>

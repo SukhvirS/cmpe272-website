@@ -62,8 +62,8 @@
             // Destroy the session.
             session_destroy();
             
-            // Redirect to login page
-            header("location: login.php");
+            // Redirect to homepage
+            header("location: index.php");
             exit;
           }
 
