@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
     }
 
-    echo("user name:".trim($_POST['username'])."|||");
-    echo("password:".trim($_POST['password'])."|||");
+    echo("user name:".trim($_POST['username'])."<br>");
+    echo("password:".trim($_POST['password'])."<br>");
     print_r($_POST);
     echo("---\r\n");
 
@@ -37,6 +37,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password = trim($_POST["password"]);
     }
     
+    echo("--".$password."<br>");
+
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
