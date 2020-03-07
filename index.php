@@ -37,6 +37,42 @@
             </li>
           </ul>
         </div>
+
+        <?php
+          // Check if the user is logged in, if not then redirect him to login page
+          if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+
+          }
+          else{
+            echo('
+              <form method="post"> 
+                <input type="submit" name="logout-button"
+                        class="btn btn-outline-dark" value="Logout" /> 
+              </form> 
+                  
+            ');
+          }
+
+          function logout(){
+            // Initialize the session
+            session_start();
+            
+            // Unset all of the session variables
+            $_SESSION = array();
+            
+            // Destroy the session.
+            session_destroy();
+            
+            // Redirect to login page
+            header("location: login.php");
+            exit;
+          }
+
+          if(array_key_exists('logout-button', $_POST)) { 
+            logout(); 
+          } 
+          
+        ?>
     </nav>
     <div>
       <div class="home-body">
