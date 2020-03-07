@@ -56,7 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo('
               <form method="post"> 
                 <input type="submit" name="logout-button"
-                        class="btn btn-outline-dark" value="Logout" /> 
+                        class="btn btn-dark" value="Logout" /> 
               </form> 
                   
             ');
