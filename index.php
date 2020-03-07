@@ -21,19 +21,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.php">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="news.html">News</a>
+                <a class="nav-link" href="news.php">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacts.php">Contacts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.php">About</a>
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@
           if(array_key_exists('logout-button', $_POST)) { 
             logout(); 
           } 
-          
+
         ?>
     </nav>
     <div>
