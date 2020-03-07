@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_username = $username;
-            echo("SQL stmt: ".$sql."<br>");
+            echo("SQL stmt: ".$stmt."<br>");
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
