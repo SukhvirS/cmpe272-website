@@ -18,6 +18,8 @@ $actual_password = '';
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    echo(password_hash('admin123'));
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
