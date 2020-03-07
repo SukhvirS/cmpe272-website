@@ -100,8 +100,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="main.css">
 
     <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
+        body{
+            font: 14px sans-serif;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+        .wrapper{
+            width: 350px; padding: 20px;
+        }
     </style>
 
 </head>
