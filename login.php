@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     echo("password entered:".$hashed_password);
 
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
+                        if(password_verify($password, $password)){
                             // Password is correct, so start a new session
                             session_start();
                             
