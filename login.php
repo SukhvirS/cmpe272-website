@@ -54,26 +54,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
 
-                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-                    echo("username:".$username."<br>");
-                    echo("password entered:".$hashed_password."<br>");
-                    echo(password_verify($password, $hashed_password));
-                
-
                     if(mysqli_stmt_fetch($stmt)){
                         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
-                            echo("password has been verified");
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
-                            // Redirect user to welcome page
+                            // Redirect user to contacts page
                             header("location: contacts.php");
                         } else{
                             // Display an error message if password is not valid
