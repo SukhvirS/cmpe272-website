@@ -57,7 +57,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                     echo("username:".$username."<br>");
-                    echo("password entered:".$hashed_password);
+                    echo("password entered:".$hashed_password."<br>");
+                    echo(password_verify($password, $hashed_password));
+                
 
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
