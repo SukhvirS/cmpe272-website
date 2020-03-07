@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
     }
 
-    echo("user name:".$_POST['username']."\r\n");
-    echo("password:".$_POST['password']."\r\n");
+    echo("user name:".trim($_POST['username'])."|||");
+    echo("password:".trim($_POST['password'])."|||");
     print_r($_POST);
     echo("---\r\n");
 
