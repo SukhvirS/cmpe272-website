@@ -25,19 +25,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
     }
 
-    echo("user name:".trim($_POST['username'])."<br>");
-    echo("password:".trim($_POST['password'])."<br>");
-    print_r($_POST);
-    echo("---\r\n");
-
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
     }
-    
-    echo("--".$password."<br>");
 
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
@@ -63,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                     $hashed_password = password_hash($password);
 
-                    echo("username:".$username);
+                    echo("username:".$username."<br>");
                     echo("password entered:".$hashed_password);
 
                     if(mysqli_stmt_fetch($stmt)){
