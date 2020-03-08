@@ -82,6 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
           ?>
       </nav>
+
       <div style="margin: 10px 10px 0 10px">
         <h2 style="float: left; margin: 0">Users</h2>
         <div style="float: right">
@@ -101,7 +102,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <button style="float: right" class="btn btn-outline-primary" data-toggle="modal" data-target="#addUserModal">+ Add User</button>
               
               <!-- Add user modal -->
-              <div class="modal fade modal-lg" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" style="margin: 20px auto" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
