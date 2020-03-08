@@ -87,15 +87,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 style="float: left; margin: 0">Users</h2>
         <div style="float: right">
           <span>
-            <div style="width:400px">
+            <div style="width:450px">
 
               <!-- Search button -->
-              <div style="width: 250px; float: left" class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                  <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey"
-                      aria-hidden="true"></i></span>
-                </div>
+              <div style="width: 320px; float: left">
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
               </div>
 
               <!-- Add user button -->
