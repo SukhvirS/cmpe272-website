@@ -40,10 +40,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <a class="nav-link" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="users.php">Users</a>
+              <a class="nav-link" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
+              <a class="nav-link active" href="users.php">Users</a>
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         ?>
     </nav>
     <div>
-        <h2>users</h2>
+        <h2>Users</h2>
         <div>
           <ul class="list-group">
             <?php

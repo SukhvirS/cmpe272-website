@@ -29,10 +29,10 @@
                 <a class="nav-link active" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="users.php">Users</a>
+              <a class="nav-link" href="about.php">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About</a>
+              <a class="nav-link" href="users.php">Users</a>
             </li>
           </ul>
         </div>
