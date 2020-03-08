@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 
-    <title>Contacts</title>
+    <title>Users</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <a class="nav-link" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="contacts.php">Contacts</a>
+              <a class="nav-link active" href="users.php">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.php">About</a>
@@ -51,7 +51,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <?php
           session_start();
 
-          // Check if the user is already logged in, if yes then redirect him to contacts page
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo('
               <form method="post"> 
@@ -84,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         ?>
     </nav>
     <div>
-        <h2>Contacts</h2>
+        <h2>users</h2>
         <div>
           <ul class="list-group">
             <?php

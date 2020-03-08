@@ -29,7 +29,7 @@
                 <a class="nav-link" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacts.php">Contacts</a>
+              <a class="nav-link" href="users.php">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.php">About</a>
@@ -40,7 +40,6 @@
         <?php
           session_start();
 
-          // Check if the user is already logged in, if yes then redirect him to contacts page
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo('
               <form method="post"> 
