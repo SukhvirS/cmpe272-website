@@ -106,17 +106,43 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="modal-dialog modal-lg" style="margin: 20px auto" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Add a new user</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="John">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Last Name</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Doe">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress">Address</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress2">Email</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="john@gmail.com">
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Home Phone</label>
+                            <input type="email" class="form-control" id="homePhone" placeholder="3342773834">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Cell Phone</label>
+                            <input type="password" class="form-control" id="cellPhone" placeholder="4489383394">
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="float: right; margin: 20px 0 20px 0">Add User</button>
+                      </form>
                     </div>
                   </div>
                 </div>
