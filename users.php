@@ -87,10 +87,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h2 style="float: left; margin: 0">Users</h2>
         <div style="float: right">
           <span>
-            <div style="width:450px">
+            <div style="width:425px">
 
               <!-- Search button -->
-              <div style="width: 320px; float: left">
+              <div style="width: 280px; float: left">
                 <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
