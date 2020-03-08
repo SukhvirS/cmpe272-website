@@ -82,7 +82,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
           ?>
       </nav>
-      <div style="margin: 10px 10px 0 10px; width: 90%">
+      <div style="margin: 10px 10px 0 10px">
         <h2 style="float: left; margin: 0">Users</h2>
         <div style="float: right">
           <span>
