@@ -221,17 +221,13 @@
                 while($row = mysqli_fetch_assoc($result)){
                   echo("<tr>");
                   echo("<th scope='row'>".$row["customerID"]."</th>");
-                  echo("<td>".$row["firtName"]."</td>");
+                  echo("<td>".$row["firstName"]."</td>");
                   echo("<td>".$row["lastName"]."</td>");
                   echo("<td>".$row["address"]."</td>");
                   echo("<td>".$row["email"]."</td>");
                   echo("<td>".$row["homePhone"]."</td>");
                   echo("<td>".$row["cellPhone"]."</td>");
                   echo("</tr>");
-
-                  echo('<li class="list-group-item">');
-                  echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
-                  echo('</li>');
                 }
                 mysqli_free_result($result);
               }
@@ -240,76 +236,6 @@
             ?>
           </tbody>
         </table>
-
-
-
-
-        <ul class="list-group">
-          <?php
-            $file = file('all_contacts.txt');
-            for($x = 0; $x < count($file); $x++){
-              echo('<li class="list-group-item">');
-              echo(($x+1).'. ');
-              echo($file[$x]);
-              echo('</li>');
-            }
-            echo("<br>");
-            echo("<br>");
-            echo("<br>");
-
-            require_once "config.php";
-
-
-            echo("from database:"."<br>");
-
-            $sql = "SELECT * FROM customers";
-
-            if($result = mysqli_query($link, $sql)){
-              while($row = mysqli_fetch_assoc($result)){
-                echo('<li class="list-group-item">');
-                echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
-                echo('</li>');
-              }
-              mysqli_free_result($result);
-            }
-
-
-            // if($stmt = mysqli_prepare($link, $sql)){
-            //   if(mysqli_stmt_execute($stmt)){
-            //     mysqli_stmt_store_result($stmt);
-
-            //     if(mysqli_num_rows($result > 0)){
-            //       while($row = mysqli_fetch_assoc($result)){
-            //         echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
-            //       }
-            //     }
-            //     else{
-            //       echo("no users");
-            //     }
-            //   }
-            //   else{
-            //     echo "Something went wrong.";
-            //   }
-            //   mysqli_stmt_close($stmt);
-            // }
-
-
-
-            // $result = mysqli_query($link, $sql);
-
-            // if(mysqli_num_rows($result > 0)){
-            //   while($row = mysqli_fetch_assoc($result)){
-            //     echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
-            //   }
-            // }
-            // else{
-            //   echo("no users");
-            // }
-
-            mysqli_close($link);
-
-          ?>
-        </ul>
       </div>
     </div>
 
