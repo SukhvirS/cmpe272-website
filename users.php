@@ -118,8 +118,8 @@
               <!-- Search button -->
               <div style="width: 280px; float: left">
                 <form class="form-inline my-2 my-lg-0" method="post">
-                  <input class="form-control mr-sm-2" name="searchField" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" name="searchForm" type="submit">Search names, emails, or phones</button>
+                  <input class="form-control mr-sm-2" name="searchField" type="search" placeholder="Search names, emails, or phones." aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" name="searchForm" type="submit">Search</button>
                 </form>
                 <?php
 
