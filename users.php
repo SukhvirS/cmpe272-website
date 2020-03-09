@@ -117,30 +117,45 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             <label for="validationFirstName">First Name</label>
                             <input type="text" class="form-control" id="validationFirstName" placeholder="John" required>
                             <div class='invalid-feedback'>
-                              Please enter your first name.
+                              Please enter a first name.
                             </div>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="inputPassword4">Last Name</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Doe">
+                            <label for="validationLastName">Last Name</label>
+                            <input type="text" class="form-control" id="validationLastName" placeholder="Doe" required>
+                            <div class='invalid-feedback'>
+                              Please enter a last name.
+                            </div>
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="inputAddress">Address</label>
-                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                          <label for="validationAddress">Address</label>
+                          <input type="text" class="form-control" id="validationAddress" placeholder="1234 Main St" required>
+                          <div class='invalid-feedback'>
+                            Please enter a valid address.
+                          </div>
                         </div>
                         <div class="form-group">
-                          <label for="inputAddress2">Email</label>
-                          <input type="text" class="form-control" id="inputAddress2" placeholder="john@gmail.com">
+                          <label for="validatioinEmail">Email</label>
+                          <input type="email" class="form-control" id="validationAddress" placeholder="john@gmail.com" required>
+                          <div class='invalid-feedback'>
+                            Please enter a valid email.
+                          </div>
                         </div>
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="inputEmail4">Home Phone</label>
-                            <input type="email" class="form-control" id="homePhone" placeholder="3342773834">
+                            <label for="validationHomePhone">Home Phone</label>
+                            <input type="text" class="form-control" id="validationAddress" placeholder="3342773834" required>
+                            <div class='invalid-feedback'>
+                              Please enter a valid phone number.
+                            </div>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="inputPassword4">Cell Phone</label>
-                            <input type="password" class="form-control" id="cellPhone" placeholder="4489383394">
+                            <label for="validationCellPhone">Cell Phone</label>
+                            <input type="text" class="form-control" id="validationCellPhone" placeholder="4489383394" required>
+                            <div class='invalid-feedback'>
+                              Please enter a valid phone number.
+                            </div>
                           </div>
                         </div>
                         <button type="submit" class="btn btn-primary" style="float: right; margin: 20px 0 20px 0">Add User</button>
