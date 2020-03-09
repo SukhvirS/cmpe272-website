@@ -111,11 +111,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form>
+                      <form class='needs-validation' novalidate>
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="inputEmail4">First Name</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="John">
+                            <label for="validationFirstName">First Name</label>
+                            <input type="text" class="form-control" id="validationFirstName" placeholder="John" required>
+                            <div class='invalid-feedback'>
+                              Please enter your first name.
+                            </div>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="inputPassword4">Last Name</label>
