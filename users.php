@@ -225,11 +225,11 @@
             
             $link = mysqli_connect("localhost", "root", "MySQL123", "cmpe272_database");
 
-            $sql = "SELECT firstName, lastName FROM customers";
+            $sql = "SELECT * FROM customers";
 
             if($result = mysqli_query($link, $sql)){
               while($row = mysqli_fetch_assoc($result)){
-                echo($row["firstName"]);
+                echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
               }
               mysqli_free_result($result);
             }
