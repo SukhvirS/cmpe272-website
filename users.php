@@ -1,12 +1,38 @@
 <?php
-// Initialize the session
-session_start();
- 
-// Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
-}
+  // Initialize the session
+  session_start();
+  
+  // Check if the user is logged in, if not then redirect him to login page
+  if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+      header("location: login.php");
+      exit;
+  }
+
+  require_once "config.php";
+
+  $firstName = $_POST["firstName"];
+  $lastName = $_POST["lastName"];
+  $address = $_POST["address"];
+  $email = $_POST["email"];
+  $homePhone = $_POST["homePhone"];
+  $cellPhone = $_POST["cellPhone"];
+
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $sql = "INSERT INTO customers (firstName, lastName, email, address, homePhone, cellPhone VALUES (?, ?, ?, ?, ?, ?)";
+    if($stmt = mysqli_prepare($link, $sql)){
+      mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $email, $address, $homePhone, $cellPhone);
+      if(mysqli_stmt_execute($stmt)){
+        header("location: users.php");
+      }
+      else{
+        echo "Something went wrong. Please try again.";
+      }
+      mysqli_stmt_close($stmt);
+    }
+
+    mysqli_close($link);
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -111,18 +137,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form class='needs-validation' novalidate>
+                      <!-- Form -->
+                      <form class='needs-validation' novalidate action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="validationFirstName">First Name</label>
-                            <input type="text" class="form-control" id="validationFirstName" placeholder="John" required>
+                            <input name="firstName" type="text" class="form-control" id="validationFirstName" placeholder="John" value="<?php echo $username; ?>" required>
                             <div class='invalid-feedback'>
                               Please enter a first name.
                             </div>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="validationLastName">Last Name</label>
-                            <input type="text" class="form-control" id="validationLastName" placeholder="Doe" required>
+                            <input name="lastName" type="text" class="form-control" id="validationLastName" placeholder="Doe" required>
                             <div class='invalid-feedback'>
                               Please enter a last name.
                             </div>
@@ -130,14 +157,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                         <div class="form-group">
                           <label for="validationAddress">Address</label>
-                          <input type="text" class="form-control" id="validationAddress" placeholder="1234 Main St" required>
+                          <input name="address" type="text" class="form-control" id="validationAddress" placeholder="1234 Main St" required>
                           <div class='invalid-feedback'>
                             Please enter a valid address.
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="validatioinEmail">Email</label>
-                          <input type="email" class="form-control" id="validationAddress" placeholder="john@gmail.com" required>
+                          <input name="email" type="email" class="form-control" id="validationAddress" placeholder="john@gmail.com" required>
                           <div class='invalid-feedback'>
                             Please enter a valid email.
                           </div>
@@ -145,14 +172,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="validationHomePhone">Home Phone</label>
-                            <input type="text" class="form-control" id="validationAddress" placeholder="3342773834" required>
+                            <input name="homePhone" type="text" class="form-control" id="validationAddress" placeholder="3342773834" required>
                             <div class='invalid-feedback'>
                               Please enter a valid phone number.
                             </div>
                           </div>
                           <div class="form-group col-md-6">
                             <label for="validationCellPhone">Cell Phone</label>
-                            <input type="text" class="form-control" id="validationCellPhone" placeholder="4489383394" required>
+                            <input name="cellPhone" type="text" class="form-control" id="validationCellPhone" placeholder="4489383394" required>
                             <div class='invalid-feedback'>
                               Please enter a valid phone number.
                             </div>
