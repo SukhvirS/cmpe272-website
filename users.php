@@ -1,4 +1,3 @@
-
 <?php
   session_start();
 
@@ -201,7 +200,6 @@
       </div>
       <br>
       <br>
-
 
       <div>
         <table class="table">
