@@ -219,7 +219,7 @@
           <tbody>
             <?php
               require_once "config.php";
-              // search
+              // if user searched for something
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
                 $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
@@ -234,7 +234,15 @@
                     }
                     else{
                       while($row = mysqli_fetch_assoc($result)){
-                        echo($row);
+                        echo("<tr>");
+                        echo("<th scope='row'>".$row["customerID"]."</th>");
+                        echo("<td>".$row["firstName"]."</td>");
+                        echo("<td>".$row["lastName"]."</td>");
+                        echo("<td>".$row["address"]."</td>");
+                        echo("<td>".$row["email"]."</td>");
+                        echo("<td>".$row["homePhone"]."</td>");
+                        echo("<td>".$row["cellPhone"]."</td>");
+                        echo("</tr>");
                       }
                     }
                     mysqli_free_result($result);
