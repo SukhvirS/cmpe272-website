@@ -202,13 +202,28 @@
       <div>
         <ul class="list-group">
           <?php
-            $file = file('all_contacts.txt');
-            for($x = 0; $x < count($file); $x++){
-              echo('<li class="list-group-item">');
-              echo(($x+1).'. ');
-              echo($file[$x]);
-              echo('</li>');
+            // $file = file('all_contacts.txt');
+            // for($x = 0; $x < count($file); $x++){
+            //   echo('<li class="list-group-item">');
+            //   echo(($x+1).'. ');
+            //   echo($file[$x]);
+            //   echo('</li>');
+            // }
+            require_once "config.php";
+            $sql = "SELECT * FROM customers";
+            $result = mysqli_query($link, $sql);
+
+            if(mysqli_num_rows($result > 0)){
+              while($row = mysqli_fetch_assoc($result)){
+                echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
+              }
             }
+            else{
+              echo("no users");
+            }
+
+            mysqli_close($link);
+
           ?>
         </ul>
       </div>
