@@ -213,11 +213,22 @@
             echo("<br>");
             echo("<br>");
 
-            require_once "config.php";
-            $sql = "SELECT * FROM customers";
+            // require_once "config.php";
+
+
+            echo("from database:"."<br>");
+            echo("<br>");
+            // define('DB_SERVER', 'localhost');
+            // define('DB_USERNAME', 'root');
+            // define('DB_PASSWORD', 'MySQL123');
+            // define('DB_NAME', 'cmpe272_database');
+            
+            $link = mysqli_connect("localhost", "root", "MySQL123", "cmpe272_database");
+
+            $sql = "SELECT firstName, lastName FROM customers";
 
             if($result = mysqli_query($link, $sql)){
-              while($row == mysqli_fetch_assoc($result)){
+              while($row = mysqli_fetch_assoc($result)){
                 echo($row["firstName"]);
               }
               mysqli_free_result($result);
