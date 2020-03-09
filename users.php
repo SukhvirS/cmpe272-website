@@ -213,7 +213,7 @@
             $sql = "SELECT * FROM customers";
 
             $result = mysqli_query($link, $sql);
-            while($row == mysql_fetch_assoc($result)){
+            while($row == mysql_fetch_array($result, MYSQL_ASSOC)){
               echo($row);
             }
 
