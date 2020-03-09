@@ -200,6 +200,50 @@
 
 
       <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Home Phone</th>
+              <th scope="col">Cell Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+              require_once "config.php";
+              $sql = "SELECT * FROM customers";
+
+              if($result = mysqli_query($link, $sql)){
+                while($row = mysqli_fetch_assoc($result)){
+                  echo("<tr>");
+                  echo("<th scope='row'>".$row["customerID"]."</th>");
+                  echo("<td>".$row["firtName"]."</td>");
+                  echo("<td>".$row["lastName"]."</td>");
+                  echo("<td>".$row["address"]."</td>");
+                  echo("<td>".$row["email"]."</td>");
+                  echo("<td>".$row["homePhone"]."</td>");
+                  echo("<td>".$row["cellPhone"]."</td>");
+                  echo("</tr>");
+
+                  echo('<li class="list-group-item">');
+                  echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
+                  echo('</li>');
+                }
+                mysqli_free_result($result);
+              }
+
+              mysqli_close($link);
+            ?>
+          </tbody>
+        </table>
+
+
+
+
         <ul class="list-group">
           <?php
             $file = file('all_contacts.txt');
