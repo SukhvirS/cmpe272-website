@@ -202,13 +202,17 @@
       <div>
         <ul class="list-group">
           <?php
-            // $file = file('all_contacts.txt');
-            // for($x = 0; $x < count($file); $x++){
-            //   echo('<li class="list-group-item">');
-            //   echo(($x+1).'. ');
-            //   echo($file[$x]);
-            //   echo('</li>');
-            // }
+            $file = file('all_contacts.txt');
+            for($x = 0; $x < count($file); $x++){
+              echo('<li class="list-group-item">');
+              echo(($x+1).'. ');
+              echo($file[$x]);
+              echo('</li>');
+            }
+            echo("<br>");
+            echo("<br>");
+            echo("<br>");
+            
             require_once "config.php";
             $sql = "SELECT * FROM customers";
 
