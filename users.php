@@ -18,7 +18,7 @@
   $cellPhone = $_POST["cellPhone"];
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $sql = "INSERT INTO customers (firstName, lastName, email, address, homePhone, cellPhone VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO customers (firstName, lastName, email, address, homePhone, cellPhone) VALUES (?, ?, ?, ?, ?, ?)";
     if($stmt = mysqli_prepare($link, $sql)){
       mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $email, $address, $homePhone, $cellPhone);
       if(mysqli_stmt_execute($stmt)){
