@@ -220,7 +220,7 @@
               // if user searched for something
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
-                $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
+                // $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
 
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
