@@ -226,7 +226,7 @@
                 }
               }
               else{
-                echo "Something went wrong."
+                echo "Something went wrong.";
               }
               mysqli_stmt_close($stmt);
             }
