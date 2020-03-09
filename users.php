@@ -212,24 +212,32 @@
             require_once "config.php";
             $sql = "SELECT * FROM customers";
 
-            if($stmt = mysqli_prepare($link, $sql)){
-              if(mysqli_stmt_execute($stmt)){
-                mysqli_stmt_store_result($stmt);
-
-                if(mysqli_num_rows($result > 0)){
-                  while($row = mysqli_fetch_assoc($result)){
-                    echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
-                  }
-                }
-                else{
-                  echo("no users");
-                }
-              }
-              else{
-                echo "Something went wrong.";
-              }
-              mysqli_stmt_close($stmt);
+            $result = mysqli_query($link, $sql);
+            while($row == mysql_fetch_assoc($result)){
+              echo($row);
             }
+
+
+            // if($stmt = mysqli_prepare($link, $sql)){
+            //   if(mysqli_stmt_execute($stmt)){
+            //     mysqli_stmt_store_result($stmt);
+
+            //     if(mysqli_num_rows($result > 0)){
+            //       while($row = mysqli_fetch_assoc($result)){
+            //         echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
+            //       }
+            //     }
+            //     else{
+            //       echo("no users");
+            //     }
+            //   }
+            //   else{
+            //     echo "Something went wrong.";
+            //   }
+            //   mysqli_stmt_close($stmt);
+            // }
+
+
 
             // $result = mysqli_query($link, $sql);
 
