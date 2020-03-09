@@ -212,13 +212,15 @@
             echo("<br>");
             echo("<br>");
             echo("<br>");
-            
+
             require_once "config.php";
             $sql = "SELECT * FROM customers";
 
-            $result = mysqli_query($link, $sql);
-            while($row == mysql_fetch_array($result, MYSQL_ASSOC)){
-              echo($row);
+            if($result = mysqli_query($link, $sql)){
+              while($row == mysqli_fetch_assoc($result)){
+                echo($row["firstName"]);
+              }
+              mysqli_free_result($result);
             }
 
 
