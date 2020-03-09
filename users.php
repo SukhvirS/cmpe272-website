@@ -217,19 +217,14 @@
 
 
             echo("from database:"."<br>");
-            echo("<br>");
-            // define('DB_SERVER', 'localhost');
-            // define('DB_USERNAME', 'root');
-            // define('DB_PASSWORD', 'MySQL123');
-            // define('DB_NAME', 'cmpe272_database');
-            
-            // $link = mysqli_connect("localhost", "root", "MySQL123", "cmpe272_database");
 
             $sql = "SELECT * FROM customers";
 
             if($result = mysqli_query($link, $sql)){
               while($row = mysqli_fetch_assoc($result)){
+                echo('<li class="list-group-item">');
                 echo("first name: ".$row["firstName"]." - last name: ".$row["lastName"]." - address: ".$row["address"]." - email: ".$row["email"]." - home phone: ".$row["homePhone"]." - cell phone: ".$row["cellPhone"]."<br>");
+                echo('</li>');
               }
               mysqli_free_result($result);
             }
