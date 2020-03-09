@@ -213,7 +213,7 @@
             echo("<br>");
             echo("<br>");
 
-            // require_once "config.php";
+            require_once "config.php";
 
 
             echo("from database:"."<br>");
@@ -223,7 +223,7 @@
             // define('DB_PASSWORD', 'MySQL123');
             // define('DB_NAME', 'cmpe272_database');
             
-            $link = mysqli_connect("localhost", "root", "MySQL123", "cmpe272_database");
+            // $link = mysqli_connect("localhost", "root", "MySQL123", "cmpe272_database");
 
             $sql = "SELECT * FROM customers";
 
