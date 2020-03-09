@@ -230,7 +230,9 @@
                   if($result = mysqli_query($link, $sql)){
                     $rowCount = mysqli_num_rows($result);
                     if($rowCount == 0){
+                      echo("<tr>");
                       echo("No result.");
+                      echo("</tr>");
                     }
                     else{
                       while($row = mysqli_fetch_assoc($result)){
