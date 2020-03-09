@@ -1,8 +1,7 @@
+
 <?php
-  // Initialize the session
   session_start();
-  
-  // Check if the user is logged in, if not then redirect him to login page
+
   if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       header("location: login.php");
       exit;
@@ -10,29 +9,54 @@
 
   require_once "config.php";
 
-  $firstName = $_POST["firstName"];
-  $lastName = $_POST["lastName"];
-  $address = $_POST["address"];
-  $email = $_POST["email"];
-  $homePhone = $_POST["homePhone"];
-  $cellPhone = $_POST["cellPhone"];
+  if(isset($_POST["newUserForm"])){
+    // create new user
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $address = $_POST["address"];
+    $email = $_POST["email"];
+    $homePhone = $_POST["homePhone"];
+    $cellPhone = $_POST["cellPhone"];
 
-  if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $sql = "INSERT INTO customers (firstName, lastName, email, address, homePhone, cellPhone) VALUES (?, ?, ?, ?, ?, ?)";
-    if($stmt = mysqli_prepare($link, $sql)){
-      mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $email, $address, $homePhone, $cellPhone);
-      if(mysqli_stmt_execute($stmt)){
-        header("location: users.php");
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+      $sql = "INSERT INTO customers (firstName, lastName, email, address, homePhone, cellPhone) VALUES (?, ?, ?, ?, ?, ?)";
+      if($stmt = mysqli_prepare($link, $sql)){
+        mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $email, $address, $homePhone, $cellPhone);
+        if(mysqli_stmt_execute($stmt)){
+          header("location: users.php");
+        }
+        else{
+          echo "Something went wrong. Please try again.";
+        }
+        mysqli_stmt_close($stmt);
       }
-      else{
-        echo "Something went wrong. Please try again.";
+    }
+
+
+    // search
+    if(isset($_POST["searchForm"])){
+      $searchInput = $_POST["searchField"];
+      $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
+
+      $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
+
+      if($result = mysqli_query($link, $sql)){
+        $rowCount = mysqli_num_rows($result);
+        if($rowCount == 0){
+          echo("No result.")
+        }
+        else{
+          while($row = mysqli_fetch_assoc($result)){
+            echo($row);
+          }
+
+        }
+        mysqli_free_result($result);
       }
-      mysqli_stmt_close($stmt);
     }
 
     mysqli_close($link);
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -118,9 +142,12 @@
               <!-- Search button -->
               <div style="width: 280px; float: left">
                 <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <input class="form-control mr-sm-2" name="searchField" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" name="searchForm" type="submit">Search</button>
                 </form>
+                <?php
+
+                ?>
               </div>
 
               <!-- Add user button -->
@@ -185,7 +212,7 @@
                             </div>
                           </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="float: right; margin: 20px 0 20px 0">Add User</button>
+                        <button type="submit" name="newUserForm" class="btn btn-primary" style="float: right; margin: 20px 0 20px 0">Add User</button>
                       </form>
                     </div>
                   </div>
@@ -215,6 +242,9 @@
           <tbody>
             <?php
               require_once "config.php";
+
+
+
               $sql = "SELECT * FROM customers";
 
               if($result = mysqli_query($link, $sql)){
