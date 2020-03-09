@@ -34,26 +34,26 @@
 
 
     // search
-    if(isset($_POST["searchForm"])){
-      $searchInput = $_POST["searchField"];
-      $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
+    // if(isset($_POST["searchForm"])){
+    //   $searchInput = $_POST["searchField"];
+    //   $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
 
-      $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
+    //   $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
 
-      if($result = mysqli_query($link, $sql)){
-        $rowCount = mysqli_num_rows($result);
-        if($rowCount == 0){
-          echo("No result.")
-        }
-        else{
-          while($row = mysqli_fetch_assoc($result)){
-            echo($row);
-          }
+    //   if($result = mysqli_query($link, $sql)){
+    //     $rowCount = mysqli_num_rows($result);
+    //     if($rowCount == 0){
+    //       echo("No result.")
+    //     }
+    //     else{
+    //       while($row = mysqli_fetch_assoc($result)){
+    //         echo($row);
+    //       }
 
-        }
-        mysqli_free_result($result);
-      }
-    }
+    //     }
+    //     mysqli_free_result($result);
+    //   }
+    // }
 
     mysqli_close($link);
   }
