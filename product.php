@@ -74,6 +74,14 @@
     <div>
       <div>
         <p id="product-name"></p>
+        <?php
+            $products = file('all_products.txt');
+            $currentUrl = 'https://';
+            $currentUrl .= $_SERVER['HTTP_HOST'];
+            $currentUrl .= $_SERVER['REQUEST_URI'];
+            echo($currentUrl);
+
+        ?>
         <img src='' id='product-image'></img>
       </div>
     </div>
@@ -82,11 +90,6 @@
         if(window.screen.width < 800){
             document.body.style.padding = '0';
             document.getElementById('home-image').src = './images/iphone.png';
-        }
-
-        function readTextFile(filePath){
-            let fr = new FileReader();
-            console.log(fr.readAsText(filePath));
         }
 
         window.onload = function(){
