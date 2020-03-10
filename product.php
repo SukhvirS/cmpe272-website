@@ -83,7 +83,6 @@
             // $indexInURL = intval($indexInURL);
             // echo($indexInURL.'<br>');
             $index = substr($currentUrl, $indexInURL);
-            echo($index);
             echo('
             <img src="'.$products[$index+1].'"></img>"
             ');
