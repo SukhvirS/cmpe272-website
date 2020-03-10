@@ -80,6 +80,7 @@
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
             $indexInURL = $currentUrl[strpos($currentUrl, 'index') + 6];
+            echo($indexInURL);
             $index = substr($currentUrl, $indexInURL);
             echo($index);
             echo('
