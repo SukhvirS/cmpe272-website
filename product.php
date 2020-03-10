@@ -78,7 +78,6 @@
     </div>
     
     <script>
-        console.log('test');
         if(window.screen.width < 800){
             document.body.style.padding = '0';
             document.getElementById('home-image').src = './images/iphone.png';
@@ -95,10 +94,8 @@
                         return currentParam[1];
                     }
                 }
-
-            document.getElementById('product-name').innerHTML = parseUrlParameter('name');
             }
-            console.log(document.getElementById('product-name'));
+            document.getElementById('product-name').innerHTML = parseUrlParameter('name');
         }
 
     </script>
