@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Montserrat|Noto+Serif+TC|Playfair+Display|Questrial|Simonetta|Work+Sans&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="main.css">
 
     <title>The Phone Company</title>
