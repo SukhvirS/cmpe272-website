@@ -79,7 +79,7 @@
             $currentUrl = 'https://';
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
-            echo($currentUrl);
+            echo(strpos($currentUrl, 'index'));
 
         ?>
         <img src='' id='product-image'></img>
