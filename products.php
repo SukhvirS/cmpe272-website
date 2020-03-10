@@ -83,7 +83,7 @@
             $price = $products[$x+2];
             echo('
               <a href="product.php?name='.str_replace(' ','-',$name).'&index='.$x.'">
-                <div class="box" >
+                <div class="card" style="width: 18rem; margin:8px 6px">
                   <img src="'.$products[$x+1].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
                   <div class="card-body">
                     <h5 class="card-title" style="color: black">'.$products[$x].'</h5>
@@ -91,6 +91,7 @@
                   </div>
                 </div>
               </a>
+              <div class="box"></div>
             ');
             $x = $x+2;
           }
