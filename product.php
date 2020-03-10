@@ -79,25 +79,27 @@
     
     <script>
         console.log('test');
-      if(window.screen.width < 800){
-        document.body.style.padding = '0';
-        document.getElementById('home-image').src = './images/iphone.png';
-      }
-
-      window.onload = function(){
-        function parseUrlParameter(param){
-          var fullUrl = window.location.search.substring(1);
-          var paramArray = fullUrl.split('&');
-          for(let i = 0; i < paramArray.length; i++){
-            let currentParam = paramArray[i].split('=');
-            if(currentParam[0] == param){
-              return currentParam[1];
-            }
-          }
-
-          document.getElementById('product-name').innerHTML = parseUrlParameter('name');
+        if(window.screen.width < 800){
+            document.body.style.padding = '0';
+            document.getElementById('home-image').src = './images/iphone.png';
         }
-        console.log(document.getElementById('product-name'));
+
+        window.onload = function(){
+            function parseUrlParameter(param){
+                var fullUrl = window.location.search.substring(1);
+                var paramArray = fullUrl.split('&');
+                
+                for(let i = 0; i < paramArray.length; i++){
+                    let currentParam = paramArray[i].split('=');
+                    if(currentParam[0] == param){
+                        return currentParam[1];
+                    }
+                }
+
+            document.getElementById('product-name').innerHTML = parseUrlParameter('name');
+            }
+            console.log(document.getElementById('product-name'));
+        }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
