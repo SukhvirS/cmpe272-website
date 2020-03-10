@@ -72,8 +72,9 @@
         ?>
     </nav>
     <div>
-      <div class="home-body">
+      <div>
         <p id="product-name"></p>
+        <img src='' id='product-image'></img>
       </div>
     </div>
     
@@ -81,6 +82,13 @@
         if(window.screen.width < 800){
             document.body.style.padding = '0';
             document.getElementById('home-image').src = './images/iphone.png';
+        }
+
+        function readTextFile(filePath){
+            const fs = require('fs') 
+            let text = fs.readFileSync(filePath);
+            let textByLine = text.split('\n');
+            console.log(textByLine);
         }
 
         window.onload = function(){
@@ -96,6 +104,7 @@
                 }
             }
             document.getElementById('product-name').innerHTML = parseUrlParameter('name').split('-').join(' ');
+            readTextFile('all_products.txt');
         }
 
     </script>
