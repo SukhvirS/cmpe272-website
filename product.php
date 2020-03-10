@@ -39,17 +39,17 @@
         </div>
 
         <?php
-          session_start();
+            session_start();
 
-          if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            echo('
-              <form method="post"> 
-                <input type="submit" name="logout-button"
-                        class="btn btn-dark" value="Logout" /> 
-              </form> 
-                  
-            ');
-          }
+            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+                echo('
+                <form method="post"> 
+                    <input type="submit" name="logout-button"
+                            class="btn btn-dark" value="Logout" /> 
+                </form> 
+                    
+                ');
+            }
 
             function logout(){
                 // Initialize the session
@@ -64,11 +64,10 @@
                 // Redirect to homepage
                 header("location: index.php");
                 exit;
-                }
+            }
 
-                if(array_key_exists('logout-button', $_POST)) { 
+            if(array_key_exists('logout-button', $_POST)) { 
                 logout(); 
-                } 
             }
 
         ?>
