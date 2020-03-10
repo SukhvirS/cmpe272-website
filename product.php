@@ -72,7 +72,7 @@
         ?>
     </nav>
     <div>
-      <div class='home-body'>
+      <div>
         <p id="product-name"></p>
         <?php
             $products = file('all_products.txt');
@@ -80,11 +80,10 @@
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
             $indexInURL = strpos($currentUrl, 'index') + 6;
-            // $indexInURL = intval($indexInURL);
-            // echo($indexInURL.'<br>');
             $index = substr($currentUrl, $indexInURL);
             echo('
             <img src="'.$products[$index+1].'"></img>
+            <a href="#" class="btn btn-primary">'.$products[$index+2].'</a>
             ');
 
         ?>
