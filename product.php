@@ -85,9 +85,8 @@
         }
 
         function readTextFile(filePath){
-            let fi = new File(filePath);
-            let f = new FileReader(f);
-            console.log(f.readAsText(fi));
+            let fr = new FileReader();
+            console.log(f.readAsText(filePath));
         }
 
         window.onload = function(){
