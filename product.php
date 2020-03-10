@@ -80,6 +80,7 @@
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
             echo(strpos($currentUrl, 'index'));
+            echo($currentUrl[strpos($currentUrl, 'index') + 6]);
 
         ?>
         <img src='' id='product-image'></img>
