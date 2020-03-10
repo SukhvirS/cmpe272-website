@@ -78,14 +78,16 @@
         <?php
           $products = file('all_products.txt');
           for($x = 0; $x < count($products); $x++){
-            echo(' 
-              <div class="card" style="width: 18rem; margin:8px 6px">
-                <img src="'.$products[$x+1].'" alt="..." width="100px" style="display: block; margin: 20px auto 0 auto">
-                <div class="card-body">
-                  <h5 class="card-title">'.$products[$x].'</h5>
-                  <a href="#" class="btn btn-primary">'.$products[$x+2].'</a>
+            echo('
+              <a href="product.php?name='.preg_replace('/[[:space:]]+/', '-', $products[x]).'">
+                <div class="card" style="width: 18rem; margin:8px 6px">
+                  <img src="'.$products[$x+1].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: black">'.$products[$x].'</h5>
+                    <a href="#" class="btn btn-primary">'.$products[$x+2].'</a>
+                  </div>
                 </div>
-              </div>
+              </a>
             ');
             $x = $x+2;
           }
