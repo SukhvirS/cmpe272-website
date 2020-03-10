@@ -72,7 +72,7 @@
         ?>
     </nav>
     <div>
-      <div>
+      <div class='home-body'>
         <p id="product-name"></p>
         <?php
             $products = file('all_products.txt');
@@ -84,11 +84,10 @@
             // echo($indexInURL.'<br>');
             $index = substr($currentUrl, $indexInURL);
             echo('
-            <img src="'.$products[$index+1].'"></img>"
+            <img src="'.$products[$index+1].'"></img>
             ');
 
         ?>
-        <img src='' id='product-image'></img>
       </div>
     </div>
     
