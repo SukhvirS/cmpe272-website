@@ -85,10 +85,9 @@
         }
 
         function readTextFile(filePath){
-            const fs = require('fs') 
-            let text = fs.readFileSync(filePath);
-            let textByLine = text.split('\n');
-            console.log(textByLine);
+            let fi = new File(filePath);
+            let f = new FileReader(f);
+            console.log(f.readAsText(fi));
         }
 
         window.onload = function(){
