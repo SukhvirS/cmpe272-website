@@ -79,7 +79,9 @@
             $currentUrl = 'https://';
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
-            $index = $currentUrl[strpos($currentUrl, 'index') + 6];
+            $indexInURL = $currentUrl[strpos($currentUrl, 'index') + 6];
+            $index = substr($currentUrl, $indexInURL);
+            echo($index);
             echo('
             <img src="'.$products[$index+1].'"></img>"
             ');
