@@ -95,7 +95,7 @@
                     }
                 }
             }
-            document.getElementById('product-name').innerHTML = parseUrlParameter('name').replace('-',' ');
+            document.getElementById('product-name').innerHTML = parseUrlParameter('name').split('-').join(' ');
         }
 
     </script>
