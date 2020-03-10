@@ -79,9 +79,9 @@
             $currentUrl = 'https://';
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
-            $indexInURL = $currentUrl[strpos($currentUrl, 'index') + 6];
-            $indexInURL = intval($indexInURL);
-            echo($indexInURL.'<br>');
+            $indexInURL = strpos($currentUrl, 'index') + 6;
+            // $indexInURL = intval($indexInURL);
+            // echo($indexInURL.'<br>');
             $index = substr($currentUrl, $indexInURL);
             echo($index);
             echo('
