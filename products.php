@@ -91,11 +91,11 @@
                   </div>
                 </div>
               </a>
-              <div class="box"></div>
             ');
             $x = $x+2;
           }
         ?>
+        <div class="box"></div>
       </div>
     </div> 
 
