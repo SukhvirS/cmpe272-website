@@ -78,8 +78,11 @@
         <?php
           $products = file('all_products.txt');
           for($x = 0; $x < count($products); $x++){
+            $name = $products[$x];
+            $image = $products[$x+1];
+            $price = $products[$x+2];
             echo('
-              <a href="product.php?name='.preg_replace('/[[:space:]]+/', '-', $products[x]).'">
+              <a href="product.php?name='.str_replace(' ','-',$name).'">
                 <div class="card" style="width: 18rem; margin:8px 6px">
                   <img src="'.$products[$x+1].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
                   <div class="card-body">
