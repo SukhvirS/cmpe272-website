@@ -94,6 +94,7 @@
               return currentParam[1];
             }
           }
+          console.log(document.getElementById('product-name'));
 
           document.getElementById('product-name').innerHTML = parseUrlParameter('name');
         }
