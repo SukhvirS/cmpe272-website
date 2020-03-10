@@ -78,6 +78,7 @@
     </div>
     
     <script>
+        console.log('test');
       if(window.screen.width < 800){
         document.body.style.padding = '0';
         document.getElementById('home-image').src = './images/iphone.png';
