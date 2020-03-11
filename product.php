@@ -80,10 +80,21 @@
             $currentUrl .= $_SERVER['REQUEST_URI'];
             $indexInURL = strpos($currentUrl, 'index') + 6;
             $index = substr($currentUrl, $indexInURL);
+            $index = intval($index);
+
+            require_once 'config.php';
+
+            $sql = 'SELECT * FROM products WHERE productID = $index';
+            $result = mysqli_query($link, $sql);
+            $row = mysqli_fetch_assoc($result);
+
             echo('
-            <img src="'.$products[$index+1].'"></img>
-            <a href="#" class="btn btn-primary">'.$products[$index+2].'</a>
+            <img src="'.$row['img1Url'].'"></img>
+            <a href="#" class="btn btn-primary">'.$row['price'].'</a>
             ');
+
+            mysqli_free_result($result);
+            mysqli_close($link);
 
         ?>
       </div>
