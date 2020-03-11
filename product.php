@@ -81,7 +81,7 @@
             $row = mysqli_fetch_assoc($result);
 
             echo('
-            <p id="'.$row['name'].'"></p>
+            <p>'.$row['name'].'></p>
             <img src="'.$row['img1Url'].'"></img>
             <a href="#" class="btn btn-primary">'.$row['price'].'</a>
             ');
