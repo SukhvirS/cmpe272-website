@@ -51,17 +51,10 @@
           }
 
           function logout(){
-            // Initialize the session
-            session_start();
-            
-            // Unset all of the session variables
-            $_SESSION = array();
-            
-            // Destroy the session.
-            session_destroy();
-            
-            // Redirect to homepage
-            header("location: index.php");
+            session_start();  // Initialize the session
+            $_SESSION = array();  // Unset all of the session variables
+            session_destroy();  // Destroy the session.
+            header("location: index.php");  // Redirect to homepage
             exit;
           }
 
@@ -96,29 +89,7 @@
               mysqli_free_result($result);
             }
             mysqli_close($link);
-
           ?>
-<!-- 
-        <?php
-          $products = file('all_products.txt');
-          for($x = 0; $x < count($products); $x++){
-            $name = $products[$x];
-            $image = $products[$x+1];
-            $price = $products[$x+2];
-            echo('
-              <a href="product.php?name='.str_replace(' ','-',$name).'&index='.$x.'">
-                <div class="card" style="width:18rem; margin:8px 6px">
-                  <img src="'.$products[$x+1].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                  <div class="card-body">
-                    <h5 class="card-title" style="color: black">'.$products[$x].'</h5>
-                    <a href="#" class="btn btn-primary">'.$products[$x+2].'</a>
-                  </div>
-                </div>
-              </a>
-            ');
-            $x = $x+2;
-          }
-        ?> -->
       </div>
     </div> 
 
