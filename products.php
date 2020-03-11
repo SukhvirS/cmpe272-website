@@ -98,10 +98,7 @@
             mysqli_close($link);
 
           ?>
-
-
-
-
+<!-- 
         <?php
           $products = file('all_products.txt');
           for($x = 0; $x < count($products); $x++){
@@ -121,7 +118,7 @@
             ');
             $x = $x+2;
           }
-        ?>
+        ?> -->
       </div>
     </div> 
 
