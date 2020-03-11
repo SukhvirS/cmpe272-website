@@ -50,17 +50,10 @@
             }
 
             function logout(){
-                // Initialize the session
-                session_start();
-
-                // Unset all of the session variables
-                $_SESSION = array();
-
-                // Destroy the session.
-                session_destroy();
-
-                // Redirect to homepage
-                header("location: index.php");
+                session_start();    // Initialize the session
+                $_SESSION = array();    // Unset all of the session variables
+                session_destroy();  // Destroy the session.
+                header("location: index.php");  // Redirect to homepage
                 exit;
             }
 
@@ -72,9 +65,8 @@
     </nav>
     <div>
       <div>
-        <p id="product-name"></p>
         <?php
-            $products = file('all_products.txt');
+            // $products = file('all_products.txt');
             $currentUrl = 'https://';
             $currentUrl .= $_SERVER['HTTP_HOST'];
             $currentUrl .= $_SERVER['REQUEST_URI'];
@@ -89,6 +81,7 @@
             $row = mysqli_fetch_assoc($result);
 
             echo('
+            <p id="'.$row['name'].'"></p>
             <img src="'.$row['img1Url'].'"></img>
             <a href="#" class="btn btn-primary">'.$row['price'].'</a>
             ');
@@ -106,21 +99,21 @@
             document.getElementById('home-image').src = './images/iphone.png';
         }
 
-        window.onload = function(){
-            function parseUrlParameter(param){
-                var fullUrl = window.location.search.substring(1);
-                var paramArray = fullUrl.split('&');
+        // window.onload = function(){
+        //     function parseUrlParameter(param){
+        //         var fullUrl = window.location.search.substring(1);
+        //         var paramArray = fullUrl.split('&');
                 
-                for(let i = 0; i < paramArray.length; i++){
-                    let currentParam = paramArray[i].split('=');
-                    if(currentParam[0] == param){
-                        return currentParam[1];
-                    }
-                }
-            }
-            document.getElementById('product-name').innerHTML = parseUrlParameter('name').split('-').join(' ');
-            readTextFile('all_products.txt');
-        }
+        //         for(let i = 0; i < paramArray.length; i++){
+        //             let currentParam = paramArray[i].split('=');
+        //             if(currentParam[0] == param){
+        //                 return currentParam[1];
+        //             }
+        //         }
+        //     }
+        //     document.getElementById('product-name').innerHTML = parseUrlParameter('name').split('-').join(' ');
+        //     readTextFile('all_products.txt');
+        // }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
