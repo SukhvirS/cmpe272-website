@@ -84,7 +84,7 @@
 
             require_once 'config.php';
 
-            $sql = 'SELECT * FROM products WHERE productID = $index';
+            $sql = "SELECT * FROM products WHERE productID = '$index'";
             $result = mysqli_query($link, $sql);
             $row = mysqli_fetch_assoc($result);
 
