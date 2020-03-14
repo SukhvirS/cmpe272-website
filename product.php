@@ -21,8 +21,7 @@
       }
 
       .carousel img{
-        height: 100%;
-        width: 300px;
+        width: 30px;
       }
 
       .carousel-control-prev-icon {
