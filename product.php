@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
-      .carousel-control-prev-icon {
-        height: 60px;
-        width: 80px;
-        background-image: url('./images/prev.png');
-      }
+    .carousel{
+      height: 400px;
+      width: 200px;
+    }
+
+    .carousel-control-prev-icon {
+      height: 60px;
+      width: 80px;
+      background-image: url('./images/prev.png');
+    }
     
     .carousel-control-next-icon {
       height: 60px;
