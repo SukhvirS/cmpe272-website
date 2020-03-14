@@ -220,9 +220,6 @@
               // if user searched for something
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
-                if($searchInput == ''){
-                  echo("<p style='color:red'>Please enter a query</h3>");
-                }
 
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
@@ -235,7 +232,12 @@
                       echo("</tr>");
                     }
                     else{
-                      echo("<h2>You searched for: ".$searchInput."</h2>");
+                      if($searchInput == ''){
+                        echo("<p style='color:red'>Please enter a query</h3>");
+                      }
+                      else{
+                        echo("<h2>You searched for: ".$searchInput."</h2>");
+                      }
                       while($row = mysqli_fetch_assoc($result)){
                         echo("<tr>");
                         echo("<th scope='row'>".$row["customerID"]."</th>");
