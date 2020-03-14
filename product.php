@@ -30,7 +30,7 @@
         width: 80%;
       }
 
-      .carousel-indicators{
+      .carousel-indicators .inactive{
         background-color: #535458;
       }
 
