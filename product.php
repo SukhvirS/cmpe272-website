@@ -17,11 +17,12 @@
 
       .carousel-item{
         border: 0;
+        margin: 0 0 20px 0;
       }
 
       .carousel-inner{
         height: auto;
-        width: 80%;
+        width: 100%;
         margin: 0 0 20px 0;
       }
 
