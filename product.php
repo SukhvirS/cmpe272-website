@@ -19,14 +19,14 @@
     }
 
     .carousel-control-prev-icon {
-      height: 60px;
-      width: 80px;
+      height: 45px;
+      width: 60px;
       background-image: url('./images/prev.png');
     }
     
     .carousel-control-next-icon {
-      height: 60px;
-      width: 80px;
+      height: 45px;
+      width: 60px;
       background-image: url('./images/next.png');
     }
   </style>
