@@ -11,7 +11,7 @@
     <style>
     .carousel{
       height: 300px;
-      width: 400px;
+      width: 40%;
       float: left;
     }
 
@@ -138,7 +138,7 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-              <div style="float: right">
+              <div style="width: 50%; float: right">
                 <p>'.$row['description'].'</p>
                 <a href="#" class="btn btn-primary">'.$row['price'].'</a>
               </div>
