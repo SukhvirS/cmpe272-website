@@ -91,13 +91,13 @@
               </ol>
               <div class="carousel-inner" style=" width:100%; height: 500px !important;">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="'.$row['img1Url'].'" alt="First slide">
+                  <img class="d-block w-100" src="'.$row['img1Url'].'" alt="First slide" style=" width:100%; height: 500px !important;">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="'.$row['img2Url'].'" alt="Second slide">
+                  <img class="d-block w-100" src="'.$row['img2Url'].'" alt="Second slide" style=" width:100%; height: 500px !important;">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="'.$row['img3Url'].'" alt="Third slide">
+                  <img class="d-block w-100" src="'.$row['img3Url'].'" alt="Third slide" style=" width:100%; height: 500px !important;">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
