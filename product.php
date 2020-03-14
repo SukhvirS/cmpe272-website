@@ -17,7 +17,6 @@
 
       .carousel-item{
         border: 0;
-        margin: 0 0 20px 0;
       }
 
       .carousel-inner{
