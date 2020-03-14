@@ -29,7 +29,6 @@
         width: 400px;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
       }
 
       .carousel img{
