@@ -30,6 +30,10 @@
         width: 80%;
       }
 
+      .carousel-indicators .active{
+          background-color: red;
+      }
+
       .carousel-control-prev-icon {
         height: 40px;
         width: 30px;
