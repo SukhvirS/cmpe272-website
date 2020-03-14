@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
+    <style>
+      .carousel-control-prev-icon {
+        height: 60px;
+        width: 80px;
+        background-image: url('./images/prev.png');
+      }
+    
+    .carousel-control-next-icon {
+      height: 60px;
+      width: 80px;
+      background-image: url('./images/next.png');
+    }
+  </style>
+
     <title>The Phone Company</title>
 </head>
 <body>
