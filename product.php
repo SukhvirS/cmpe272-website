@@ -21,17 +21,17 @@
 
       .carousel-inner{
         height: 400px;
-        width: 400px;
+        width: 450px;
       }
 
-      .carousel-item{
+      /* .carousel-item{
         height: 400px;
-        width: 400px;
-      }
+        width: 450px;
+      } */
 
       .carousel img{
         height: 400px;
-        width: 400px;
+        width: 450px;
         padding: 0 0 0 50px;
       }
 
