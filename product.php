@@ -14,7 +14,7 @@
       width: 400px;
     }
 
-    .carousel-item{
+    .carousel-item img{
       height: 300px;
     }
 
