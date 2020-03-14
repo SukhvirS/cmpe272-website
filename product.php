@@ -30,7 +30,7 @@
       } */
 
       .carousel img{
-        height: 400px;
+        height: auto;
         width: 100%;
         padding: 0 0 0 50px;
       }
