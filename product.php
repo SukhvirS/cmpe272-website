@@ -38,8 +38,9 @@
 
     .product-name{
       text-align: center;
+      padding: 0 0 20px 0;
       margin: 0 15vw;
-      font-size: 4vw;
+      font-size: 3vw;
     }
   </style>
 
