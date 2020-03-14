@@ -88,3 +88,15 @@ body h2{
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
+  
+.carousel-control-prev-icon {
+    height: 60px;
+    width: 80px;
+    background-image: url('./images/prev.png');
+  }
+  
+  .carousel-control-next-icon {
+    height: 60px;
+    width: 80px;
+    background-image: url('./images/next.png');
+  }
