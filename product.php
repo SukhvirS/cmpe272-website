@@ -19,6 +19,11 @@
         border: 0;
       }
 
+      .carousel img{
+        height: 400px;
+        width: 400px;
+      }
+
       .carousel-control-prev-icon {
         height: 40px;
         width: 30px;
