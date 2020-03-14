@@ -32,6 +32,7 @@
       .carousel img{
         height: 400px;
         width: 400px;
+        padding: 0 0 0 50px;
       }
 
       .carousel-control-prev-icon {
