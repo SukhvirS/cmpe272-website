@@ -14,10 +14,6 @@
       width: 400px;
     }
 
-    .carousel-item img{
-      height: 300px;
-    }
-
     .carousel-control-prev-icon {
       height: 40px;
       width: 30px;
