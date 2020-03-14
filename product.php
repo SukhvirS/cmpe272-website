@@ -16,7 +16,6 @@
 
     .carousel-item img{
       height: 300px;
-      width: auto;
     }
 
     .carousel-control-prev-icon {
