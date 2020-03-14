@@ -22,7 +22,7 @@
 
       .carousel img{
         height: 100%;
-        width: auto;
+        width: 300px;
       }
 
       .carousel-control-prev-icon {
