@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
-    .carousel-inner{
+    .carousel{
       height: 600px;
       width: 400px;
     }
 
+    .carousel-indicators{
+
+    }
+    
     .carousel-control-prev-icon {
       height: 60px;
       width: 80px;
