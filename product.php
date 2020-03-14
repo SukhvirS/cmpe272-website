@@ -19,6 +19,16 @@
         border: 0;
       }
 
+      .carousel-inner{
+        height: 400px;
+        width: 400px;
+      }
+
+      .carousel-item{
+        height: 400px;
+        width: 400px;
+      }
+
       .carousel img{
         height: 400px;
         width: 400px;
