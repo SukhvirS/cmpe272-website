@@ -159,7 +159,7 @@
                 </a>
               </div>
               <div style="width: 50%; float: right">
-                <p>'.$row['description'].'</p>
+                <p style="padding: 20px 0">'.$row['description'].'</p>
                 <a href="#" class="btn btn-primary">'.$row['price'].'</a>
               </div>
             </div>
