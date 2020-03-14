@@ -14,8 +14,8 @@
       width: 400px;
     }
 
-    .carousel-indicators{
-
+    .carousel-item{
+      height: 300px;
     }
 
     .carousel-control-prev-icon {
