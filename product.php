@@ -11,7 +11,7 @@
     <style>
     .carousel{
       height: 600px;
-      width: 40px;
+      width: 400px;
     }
 
     .carousel-control-prev-icon {
