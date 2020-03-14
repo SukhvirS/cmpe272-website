@@ -35,6 +35,13 @@
       width: 30px;
       background-image: url('./images/next.png');
     }
+
+    .product-name{
+      text-align: center;
+      padding: 80px 0px 50px 0;
+      margin: 0 15vw;
+      font-size: 4vw;
+    }
   </style>
 
     <title>The Phone Company</title>
@@ -110,7 +117,7 @@
             $row = mysqli_fetch_assoc($result);
 
             echo('
-            <p class="home-body">'.$row['name'].'</p>
+            <p class="product-name">'.$row['name'].'</p>
             <div>
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
