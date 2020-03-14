@@ -15,6 +15,10 @@
       float: left;
     }
 
+    .carousel > * {
+      border: 0;
+    }
+
     .carousel-item{
       height: 300px;
     }
