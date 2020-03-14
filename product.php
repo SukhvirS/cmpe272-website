@@ -9,48 +9,41 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
-    .carousel{
-      height: 300px;
-      width: 40%;
-      float: left;
-    }
+      .carousel{
+        height: 300px;
+        width: 40%;
+        float: left;
+      }
 
-    .carousel > * {
-      border: 0;
-    }
+      .carousel-item{
+        height: 300px;
+        border: 0;
+      }
 
-    .carousel-item{
-      height: 300px;
-      border: 0;
-    }
+      .carousel img{
+        height: 100%;
+        width: auto;
+      }
 
-    .carousel img{
-      height: 100%;
-      width: auto;
-      border: 0;
-    }
+      .carousel-control-prev-icon {
+        height: 40px;
+        width: 30px;
+        background-image: url('./images/prev.png');
+      }
+      
+      .carousel-control-next-icon {
+        height: 40px;
+        width: 30px;
+        background-image: url('./images/next.png');
+      }
 
-    .carousel-control-prev-icon {
-      height: 40px;
-      width: 30px;
-      background-image: url('./images/prev.png');
-      border: 0;
-    }
-    
-    .carousel-control-next-icon {
-      height: 40px;
-      width: 30px;
-      background-image: url('./images/next.png');
-      border: 0;
-    }
-
-    .product-name{
-      text-align: center;
-      padding: 0 0 20px 0;
-      margin: 0 15vw;
-      font-size: 3vw;
-    }
-  </style>
+      .product-name{
+        text-align: center;
+        padding: 0 0 20px 0;
+        margin: 0 15vw;
+        font-size: 3vw;
+      }
+    </style>
 
     <title>The Phone Company</title>
 </head>
