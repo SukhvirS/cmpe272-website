@@ -220,25 +220,19 @@
               // if user searched for something
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
+                // $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
 
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
 
                   if($result = mysqli_query($link, $sql)){
                     $rowCount = mysqli_num_rows($result);
-                    echo("<h2>You searched for: ".$searchInput."</h2>");
                     if($rowCount == 0){
                       echo("<tr>");
                       echo("<td scope='row'>No result.</td>");
                       echo("</tr>");
                     }
                     else{
-                      if($searchInput == ''){
-                        echo("<p style='color:red'>Please enter a query</h3>");
-                      }
-                      else{
-                        echo("<h2>You searched for: ".$searchInput."</h2>");
-                      }
                       while($row = mysqli_fetch_assoc($result)){
                         echo("<tr>");
                         echo("<th scope='row'>".$row["customerID"]."</th>");
