@@ -20,13 +20,13 @@
 
     .carousel-control-prev-icon {
       height: 40px;
-      width: 50px;
+      width: 30px;
       background-image: url('./images/prev.png');
     }
     
     .carousel-control-next-icon {
       height: 40px;
-      width: 50px;
+      width: 30px;
       background-image: url('./images/next.png');
     }
   </style>
