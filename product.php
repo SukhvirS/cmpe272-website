@@ -30,9 +30,12 @@
         width: 80%;
       }
 
+      .carousel-indicators{
+        background-color: #535458;
+      }
+
       .carousel-indicators .active{
-          background-color: red;
-          color: green;
+          background-color: #373741;
       }
 
       .carousel-control-prev-icon {
