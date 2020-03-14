@@ -220,6 +220,9 @@
               // if user searched for something
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
+                if($searchInput == ''){
+                  echo("<h3>Please enter a query</h3>");
+                }
                 // $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
 
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
