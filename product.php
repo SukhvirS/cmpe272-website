@@ -21,7 +21,6 @@
 
       .carousel-inner{
         height: auto;
-        margin: 0 0 20px 0;
       }
 
       .carousel img{
@@ -35,7 +34,7 @@
       }
 
       .carousel-indicators .active{
-          background-color: #373741;
+        background-color: #373741;
       }
 
       .carousel-control-prev-icon {
