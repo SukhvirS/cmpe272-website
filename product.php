@@ -21,7 +21,7 @@
 
       .carousel-inner{
         height: 400px;
-        width: 450px;
+        width: 100%;
       }
 
       /* .carousel-item{
@@ -31,7 +31,7 @@
 
       .carousel img{
         height: 400px;
-        width: 450px;
+        width: 100%;
         padding: 0 0 0 50px;
       }
 
