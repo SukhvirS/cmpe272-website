@@ -10,7 +10,7 @@
 
     <style>
       .carousel{
-        height: 500px;
+        height: 50%;
         width: 40%;
         float: left;
       }
@@ -20,19 +20,13 @@
       }
 
       .carousel-inner{
-        height: 400px;
+        height: auto;
         width: 100%;
       }
-
-      /* .carousel-item{
-        height: 400px;
-        width: 450px;
-      } */
 
       .carousel img{
         height: auto;
         width: 100%;
-        padding: 0 0 0 50px;
       }
 
       .carousel-control-prev-icon {
