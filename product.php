@@ -27,6 +27,7 @@
       .carousel img{
         height: auto;
         width: 80%;
+        margin: 0 0 20px 0;
       }
 
       .carousel-indicators li{
