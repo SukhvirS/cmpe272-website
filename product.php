@@ -32,6 +32,7 @@
 
       .carousel-indicators .active{
           background-color: red;
+          color: green;
       }
 
       .carousel-control-prev-icon {
