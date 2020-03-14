@@ -110,7 +110,7 @@
             $row = mysqli_fetch_assoc($result);
 
             echo('
-            <p>'.$row['name'].'</p>
+            <p class="home-body">'.$row['name'].'</p>
             <div>
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
