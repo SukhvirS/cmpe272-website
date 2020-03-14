@@ -21,13 +21,12 @@
 
       .carousel-inner{
         height: auto;
-        margin: 0 0 20px 0;
       }
 
       .carousel img{
         height: auto;
         width: 80%;
-        margin: 0 0 20px 0;
+        margin: 0 0 40px 0;
       }
 
       .carousel-indicators li{
