@@ -10,7 +10,7 @@
 
     <style>
       .carousel{
-        height: 700px;
+        height: 500px;
         width: 40%;
         float: left;
       }
