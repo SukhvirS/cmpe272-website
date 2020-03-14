@@ -226,6 +226,7 @@
 
                   if($result = mysqli_query($link, $sql)){
                     $rowCount = mysqli_num_rows($result);
+                    echo("<h2>You searched for: ".$searchInput."</h2>");
                     if($rowCount == 0){
                       echo("<tr>");
                       echo("<td scope='row'>No result.</td>");
