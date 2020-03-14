@@ -221,37 +221,37 @@
               if(isset($_POST["searchForm"])){
                 $searchInput = $_POST["searchField"];
                 if($searchInput == ''){
-                  echo("<h3>Please enter a query</h3>");
+                  echo("<p style='color:red'>Please enter a query</h3>");
                 }
-                // $searchInput = preg_replace("#[^0-9a-z]#i", "", $searchInput);
+                else{
+                  if($_SERVER["REQUEST_METHOD"] == "POST"){
+                    $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
 
-                if($_SERVER["REQUEST_METHOD"] == "POST"){
-                  $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
-
-                  if($result = mysqli_query($link, $sql)){
-                    $rowCount = mysqli_num_rows($result);
-                    if($rowCount == 0){
-                      echo("<tr>");
-                      echo("<td scope='row'>No result.</td>");
-                      echo("</tr>");
-                    }
-                    else{
-                      echo("<h2>You searched for: ".$searchInput."</h2>");
-                      while($row = mysqli_fetch_assoc($result)){
+                    if($result = mysqli_query($link, $sql)){
+                      $rowCount = mysqli_num_rows($result);
+                      if($rowCount == 0){
                         echo("<tr>");
-                        echo("<th scope='row'>".$row["customerID"]."</th>");
-                        echo("<td>".$row["firstName"]."</td>");
-                        echo("<td>".$row["lastName"]."</td>");
-                        echo("<td>".$row["address"]."</td>");
-                        echo("<td>".$row["email"]."</td>");
-                        echo("<td>".$row["homePhone"]."</td>");
-                        echo("<td>".$row["cellPhone"]."</td>");
+                        echo("<td scope='row'>No result.</td>");
                         echo("</tr>");
                       }
+                      else{
+                        echo("<h2>You searched for: ".$searchInput."</h2>");
+                        while($row = mysqli_fetch_assoc($result)){
+                          echo("<tr>");
+                          echo("<th scope='row'>".$row["customerID"]."</th>");
+                          echo("<td>".$row["firstName"]."</td>");
+                          echo("<td>".$row["lastName"]."</td>");
+                          echo("<td>".$row["address"]."</td>");
+                          echo("<td>".$row["email"]."</td>");
+                          echo("<td>".$row["homePhone"]."</td>");
+                          echo("<td>".$row["cellPhone"]."</td>");
+                          echo("</tr>");
+                        }
+                      }
+                      mysqli_free_result($result);
                     }
-                    mysqli_free_result($result);
-                  }
 
+                  }
                 }
               }
               else{
