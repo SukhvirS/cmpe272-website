@@ -21,6 +21,7 @@
 
       .carousel-inner{
         height: auto;
+        margin: 0 0 20px 0;
       }
 
       .carousel img{
