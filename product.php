@@ -14,11 +14,11 @@
         width: 40%;
         float: left;
       }
-
+/* 
       .carousel-item{
         height: 300px;
         border: 0;
-      }
+      } */
 
       /* .carousel img{
         width: 30px;
