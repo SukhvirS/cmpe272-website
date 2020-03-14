@@ -224,7 +224,9 @@
 
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $sql = "SELECT * FROM customers WHERE firstName LIKE '%$searchInput%' OR lastName LIKE '%$searchInput%' OR email LIKE '%$searchInput%' OR homePhone LIKE '%$searchInput%' OR cellPhone LIKE '%$searchInput%'";
-                  echo("<h2>".$searchInput."</h2>");
+                  if($searchInput != ''){
+                    echo("<h2>".$searchInput."</h2>");
+                  }
 
                   if($result = mysqli_query($link, $sql)){
                     $rowCount = mysqli_num_rows($result);
