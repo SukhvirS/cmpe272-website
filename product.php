@@ -10,14 +10,14 @@
 
     <style>
     .carousel{
-      height: 600px;
+      height: 300px;
       width: 400px;
     }
 
     .carousel-indicators{
 
     }
-    
+
     .carousel-control-prev-icon {
       height: 60px;
       width: 80px;
