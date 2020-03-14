@@ -14,7 +14,7 @@
       width: 400px;
     }
 
-    .carousel-inner{
+    .carousel-item{
       height: 300px;
       width: 400px;
     }
