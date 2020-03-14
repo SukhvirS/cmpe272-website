@@ -10,8 +10,8 @@
 
     <style>
     .carousel{
-      height: 400px;
-      width: 200px;
+      height: 600px;
+      width: 40px;
     }
 
     .carousel-control-prev-icon {
