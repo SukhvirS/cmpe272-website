@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
-    .carousel{
+    .carousel-inner{
       height: 600px;
       width: 400px;
     }
