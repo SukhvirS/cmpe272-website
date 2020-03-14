@@ -16,7 +16,6 @@
 
     .carousel-item{
       height: 300px;
-      width: 400px;
     }
 
     .carousel img{
