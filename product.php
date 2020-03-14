@@ -38,7 +38,6 @@
 
     .product-name{
       text-align: center;
-      padding: 80px 0px 50px 0;
       margin: 0 15vw;
       font-size: 4vw;
     }
