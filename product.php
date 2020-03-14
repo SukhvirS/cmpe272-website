@@ -109,7 +109,7 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="'.$row['img1Url'].'" alt="First slide" height="20px" width="auto">
+                  <img class="d-block w-100" src="'.$row['img1Url'].'" alt="First slide">
                 </div>
                 <div class="carousel-item">
                   <img class="d-block w-100" src="'.$row['img2Url'].'" alt="Second slide">
