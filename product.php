@@ -27,6 +27,10 @@
       .carousel-item{
         height: 400px;
         width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
       }
 
       .carousel img{
