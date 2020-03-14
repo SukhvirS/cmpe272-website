@@ -160,6 +160,10 @@
             document.getElementById('home-image').src = './images/iphone.png';
         }
 
+        window.onload = function(){
+          document.getElementByClassName('carousel').style.height = document.getElementByClassName('d-block').getAttribute('height');
+        }
+
         // window.onload = function(){
         //     function parseUrlParameter(param){
         //         var fullUrl = window.location.search.substring(1);
