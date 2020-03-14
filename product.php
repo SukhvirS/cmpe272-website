@@ -88,7 +88,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
-              <div class="carousel-inner" style="height:400px; max-height: 400px; width: auto;">
+              <div class="carousel-inner" style="height:400px; max-height: 400px; width: 600px;">
                 <div class="carousel-item active" style="height:400px; max-height: 400px; width: auto;">
                   <img class="d-block w-100" src="'.$row['img1Url'].'" alt="First slide">
                 </div>
