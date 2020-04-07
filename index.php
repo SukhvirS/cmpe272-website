@@ -15,7 +15,8 @@
         itemsString += String(item);
       }
       console.log(itemsString);
-      window.location.href += "?recents=" + itemsString;
+      var newUrl = window.location.href + "?recents=" + itemsString;
+      history.pushState({},'Home',newUrl);
     </script>
 
     <title>The Phone Company</title>
