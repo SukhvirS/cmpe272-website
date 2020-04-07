@@ -10,11 +10,10 @@
 
     <style>
       .flex-container{
-        display: flex; /* [1] */
-        flex-wrap: nowrap; /* [1] */
-        overflow-x: scroll; /* [2] */
-        -webkit-overflow-scrolling: touch; /* [3] */
-        -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+        display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-x: auto;
       }
 
       .card {
