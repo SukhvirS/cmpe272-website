@@ -97,7 +97,10 @@
           }
         </script> -->
         <?php
-          print_r(json_decode($_COOKIE['mostRecentItemsCookie']));
+          $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
+          foreach($recentItems as $key => $value){
+            echo("$key has the value $value");
+          }
         ?>
       </div>
     </div>
