@@ -26,9 +26,8 @@
     </style>
 
     <script>
-      var items = JSON.parse(localStorage.getItem('mostRecent'));
-
       function updateRecentlyViewed(x){
+        var items = JSON.parse(localStorage.getItem('mostRecent'));
         if(items == null){
           items = [x];
           localStorage.setItem('mostRecent', JSON.stringify(items));
