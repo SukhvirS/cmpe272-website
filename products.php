@@ -24,6 +24,7 @@
       <script>
         function updateRecentlyViewed(x){
           var items = localStorage.getItem('mostRecent');
+          console.log(items);
           items.unshift(x);
           if(items.length >= 5){
             items = items.slice(0,5);
