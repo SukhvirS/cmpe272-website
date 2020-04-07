@@ -27,9 +27,21 @@
           if(items == null){
             items = [];
           }
-          items.unshift(x);
-          if(items.length >= 5){
-            items = items.slice(0,5);
+          // if item in the 5 most recently viewed items, move it to the front (most recent)
+          if(items.slice(0,5).includes(x)){
+            items = items.slice(0,4);
+            const index = items.indexOf(x);
+            if(index > -1){
+              items = items.splice(index, 1);
+            }
+            items.unshift(x);
+          }
+          else{
+            items.unshift(x);
+            if(items.length >= 5){
+              items = items.slice(0,5);
+            }
+
           }
           console.log(items);
           localStorage.setItem('mostRecent', JSON.stringify(items));
