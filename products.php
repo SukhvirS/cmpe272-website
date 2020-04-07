@@ -23,7 +23,7 @@
 
       <script>
         function updateRecentlyViewed(x){
-          console.log(x);
+          window.localstorage.setItem('mostRecentProduct', x);
         }
       </script>
 
