@@ -40,25 +40,6 @@
               items = items.splice(0,5);
             }
             localStorage.setItem('mostRecent', JSON.stringify(items));
-
-            // if(items.length != 5){
-            //   items.unshift(x);
-            // }
-            // else{
-            //   // if item in the 5 most recently viewed items, move it to the front (most recent)
-            //   if(items.includes(x)){
-            //     const index = items.indexOf(x);
-            //     if(index > -1){
-            //       items = items.splice(index, 1);
-            //     }
-            //     items.unshift(x);
-            //   }
-            //   else{
-            //     items.unshift(x);
-            //     items = items.slice(0,5);
-            //   }
-            // }
-            // localStorage.setItem('mostRecent', JSON.stringify(items));
           }
         }
       </script>
