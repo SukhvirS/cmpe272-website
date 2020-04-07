@@ -24,7 +24,7 @@
       <script>
         localStorage.setItem('test','one');
         function updateRecentlyViewed(x){
-          alert('product clicked: '+x);
+          console.log('product clicked: '+x);
           localStorage.setItem('mostRecentProduct', String(x));
         }
       </script>
