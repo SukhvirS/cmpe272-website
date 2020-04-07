@@ -126,8 +126,6 @@
       <br>
       <div>
         <h2>Most recently viewed items:</h2>
-        <br>
-        
         <div class='flex-container'>
           <?php
             require_once 'config.php';
