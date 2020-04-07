@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
+      .flex-container{
+        display: flex;
+      }
+
       .card {
         transition: 0.3s;
       }
