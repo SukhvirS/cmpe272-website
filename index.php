@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="main.css">
 
     <script>
-      var items = JSON.parse(localStorage('mostRecent'));
+      var items = JSON.parse(localStorage.getItem('mostRecent'));
       var itemsString = '';
       for(item of items){
         itemsString += String(item);
