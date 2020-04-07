@@ -19,13 +19,13 @@ nav h1{
     padding: 10px 40px 0 0;
     font-size: 20px;
 }
-
+/* 
 .home-body{
     text-align: center;
 }
 
 .home-body p{
-    padding: 40px 0px 50px 0;
+    padding: 20px 0px 20px 0;
     margin: 0 15vw;
     font-size: 4vw;
 }
@@ -42,7 +42,7 @@ nav h1{
 
 body h2{
     text-align: center;
-}
+} */
 
 @media (max-width: 800px) {
     .home-body p{
