@@ -28,6 +28,7 @@
 
       <script>
         var items = JSON.parse(localStorage.getItem('mostRecent'));
+
         function updateRecentlyViewed(x){
           if(items == null){
             items = [x];
@@ -47,14 +48,27 @@
             localStorage.setItem('mostRecent', JSON.stringify(items));
           }
         }
-        $.ajax({
-          url:"index.php",
-          method: "post",
-          data: items,
-          success: function(res){
-            console.log(res);
-          }
-        });
+
+        function createCookie(name,value,days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/; domain=.example.com";
+        }
+
+        createCookie('cookieee','stuff','22');
+
+        // $.ajax({
+        //   url:"index.php",
+        //   method: "post",
+        //   data: items,
+        //   success: function(res){
+        //     console.log(res);
+        //   }
+        // });
       </script>
 
     <title>Products</title>
