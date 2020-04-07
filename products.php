@@ -60,7 +60,7 @@
             document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
         }
 
-        createCookie('cookieee','stuff','22');
+        createCookie('cookieee', String(items),'10');
 
         // $.ajax({
         //   url:"index.php",
