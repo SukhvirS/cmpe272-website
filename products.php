@@ -56,7 +56,8 @@
                 var expires = "; expires="+date.toGMTString();
             }
             else var expires = "";
-            document.cookie = name+"="+value+expires+"; path=/; domain=.sukhvir-singh.com";
+            // document.cookie = name+"="+value+expires+"; path=/; domain=.sukhvir-singh.com";
+            document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
         }
 
         createCookie('cookieee','stuff','22');
