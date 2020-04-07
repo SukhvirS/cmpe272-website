@@ -11,12 +11,15 @@
     <style>
       .flex-container{
         display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  overflow-x: auto;
+      }
+
+      .flex-container::-webkit-scrollbar {
+          display: none;
       }
 
       .card {
+        flex: 0 0 18rem;
+        margin: 8px 6px;
         transition: 0.3s;
       }
 
@@ -24,9 +27,6 @@
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       }
 
-      .container {
-        padding: 2px 16px;
-      }
     </style>
 
     <script>
@@ -146,7 +146,7 @@
                 while($row = mysqli_fetch_assoc($result)){
                   echo('
                   <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                    <div class="card" style="width:18rem; margin:8px 6px">
+                    <div class="card">
                       <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
                       <div class="card-body">
                         <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
