@@ -54,7 +54,6 @@
           }
           v.push(x);
           localStorage.setItem('mostRecent', JSON.stringify(v));
-          return;
         }
       </script>
 
