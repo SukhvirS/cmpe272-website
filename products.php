@@ -27,12 +27,11 @@
           if(items == null){
             items = [];
           }
-          console.log(items);
           items.unshift(x);
           if(items.length >= 5){
             items = items.slice(0,5);
           }
-
+          console.log(items);
           localStorage.setItem('mostRecent', JSON.stringify(items));
         }
       </script>
