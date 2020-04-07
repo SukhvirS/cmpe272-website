@@ -97,7 +97,7 @@
         </script> -->
         <?php
         // $items = json_decode($_POST['items']);
-          echo($_POST['items']); 
+          echo($_POST); 
           // $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
           // echo($actual_link);
         ?>
