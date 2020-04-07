@@ -57,18 +57,8 @@
                 var expires = "; expires="+date.toGMTString();
             }
             else var expires = "";
-            // document.cookie = name+"="+value+expires+"; path=/; domain=.sukhvir-singh.com";
             document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
         }
-
-        // $.ajax({
-        //   url:"index.php",
-        //   method: "post",
-        //   data: items,
-        //   success: function(res){
-        //     console.log(res);
-        //   }
-        // });
       </script>
 
     <title>Products</title>

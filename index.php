@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
-    <!-- <script>
-      var items = JSON.parse(localStorage.getItem('mostRecent'));
-      var itemsString = '';
-      for(item of items){
-        itemsString += String(item);
-      }
-      console.log(itemsString);
-      var newUrl = window.location.href + "?recents=" + itemsString;
-      history.pushState({},'Home',newUrl);
-    </script> -->
-
     <title>The Phone Company</title>
 </head>
 <body>
@@ -90,12 +79,7 @@
       <div>
         Most recently viewed items
         <br>
-        <!-- <script>
-          var items = JSON.parse(localStorage.getItem('mostRecent'));
-          for(item of items){
-            document.write("<h1>"+item+"</h1>");
-          }
-        </script> -->
+
         <?php
           $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
           foreach($recentItems as $key => $value){
