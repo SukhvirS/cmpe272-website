@@ -14,6 +14,7 @@
       for(item of items){
         itemsString += String(item);
       }
+      console.log(itemsString);
       window.location.href += "?recents=" + itemsString;
     </script>
 
