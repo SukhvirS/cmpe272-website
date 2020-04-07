@@ -89,6 +89,7 @@
       </div>
       <div>
         Most recently viewed items
+        <br>
         <!-- <script>
           var items = JSON.parse(localStorage.getItem('mostRecent'));
           for(item of items){
@@ -96,7 +97,7 @@
           }
         </script> -->
         <?php
-          // print_r($_COOKIE);
+          print_r($_COOKIE);
         ?>
       </div>
     </div>
