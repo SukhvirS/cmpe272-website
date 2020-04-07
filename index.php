@@ -124,6 +124,7 @@
       <img id='home-image' src="./images/phones.png" alt="image" width="100%">  
       <br>
       <br>
+      <br>
       <div>
         <h2>Most recently viewed items:</h2>
         <div class='flex-container'>
@@ -152,6 +153,7 @@
               }
             }
           ?>
+          
         </div>
       </div>
     </div>
