@@ -23,7 +23,14 @@
 
       <script>
         function updateRecentlyViewed(x){
-          localStorage.setItem('mostRecent', x);
+          var items = []
+          if(items.length == 5){
+            items = [x] + items[0:4];
+          }
+          else{
+            items = [x] + items;
+          }
+          localStorage.setItem('mostRecent', items);
         }
       </script>
 
