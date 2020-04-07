@@ -89,12 +89,16 @@
       </div>
       <div>
         Most recently viewed items
-        <script>
+        <!-- <script>
           var items = JSON.parse(localStorage.getItem('mostRecent'));
           for(item of items){
             document.write("<h1>"+item+"</h1>");
           }
-        </script>
+        </script> -->
+        <php?
+          $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+          echo($actual_link);
+        ?>
       </div>
     </div>
     
