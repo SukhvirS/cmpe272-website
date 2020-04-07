@@ -34,13 +34,13 @@
               if(index > -1){
                 items = items.splice(index, 1);
               }
-              items.unshift(x);
             }
+            items.unshift(x);
             if(items.length > 5){
               items = items.splice(0,5);
             }
             localStorage.setItem('mostRecent', JSON.stringify(items));
-            
+
             // if(items.length != 5){
             //   items.unshift(x);
             // }
