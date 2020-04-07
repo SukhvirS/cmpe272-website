@@ -48,12 +48,12 @@
           //   }
           //   localStorage.setItem('mostRecent', JSON.stringify(items));
           // }
-          var v = JSON.parse(localStorage.getItem('mostRecent'));
+          var v = JSON.parse(window.localStorage.getItem('mostRecent'));
           if(v == null){
             v = [];
           }
           v.push(x);
-          localStorage.setItem('mostRecent', JSON.stringify(v));
+          window.localStorage.setItem('mostRecent', JSON.stringify(v));
         }
       </script>
 
