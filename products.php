@@ -56,7 +56,7 @@
                 var expires = "; expires="+date.toGMTString();
             }
             else var expires = "";
-            document.cookie = name+"="+value+expires+"; path=/; domain=.example.com";
+            document.cookie = name+"="+value+expires+"; path=/; domain=.sukhvir-singh.com";
         }
 
         createCookie('cookieee','stuff','22');
