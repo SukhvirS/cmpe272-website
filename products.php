@@ -46,7 +46,7 @@
               items = items.splice(0,5);
             }
             localStorage.setItem('mostRecent', JSON.stringify(items));
-            createCookie('mostRecentItemsCookie', String(items),'10');
+            createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
           }
         }
 

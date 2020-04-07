@@ -97,7 +97,7 @@
           }
         </script> -->
         <?php
-          print_r($_COOKIE['cookieee']);
+          print_r(json_decode($_COOKIE['mostRecentItemsCookie']));
         ?>
       </div>
     </div>
