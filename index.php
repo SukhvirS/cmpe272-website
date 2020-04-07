@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
-    <script>
+    <!-- <script>
       var items = JSON.parse(localStorage.getItem('mostRecent'));
       var itemsString = '';
       for(item of items){
@@ -17,7 +17,7 @@
       console.log(itemsString);
       var newUrl = window.location.href + "?recents=" + itemsString;
       history.pushState({},'Home',newUrl);
-    </script>
+    </script> -->
 
     <title>The Phone Company</title>
 </head>
@@ -97,8 +97,8 @@
         </script> -->
         <?php
           echo $_COOKIE["gfg"]; 
-          $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-          echo($actual_link);
+          // $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+          // echo($actual_link);
         ?>
       </div>
     </div>
