@@ -97,7 +97,7 @@
           }
         </script> -->
         <?php
-          print_r($_COOKIE);
+          print_r($_COOKIE['cookieee']);
         ?>
       </div>
     </div>
