@@ -24,6 +24,7 @@
       <script>
         localStorage.setItem('test','one');
         function updateRecentlyViewed(x){
+          console.log('product clicked: '+x);
           localStorage.setItem('mostRecentProduct', String(x));
         }
       </script>
@@ -100,7 +101,7 @@
                     <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
                     <div class="card-body">
                       <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                      <a href="#" class="btn btn-primary">'.$row["price"].'</a>
+                      <a href="" class="btn btn-primary">'.$row["price"].'</a>
                     </div>
                   </div>
                 </a>
