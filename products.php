@@ -50,7 +50,7 @@
         $.ajax({
           url:"index.php",
           method: "post",
-          data: {items: JSON.stringify(items)},
+          data: items,
           success: function(res){
             console.log(res);
           }
