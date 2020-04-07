@@ -24,6 +24,9 @@
       <script>
         function updateRecentlyViewed(x){
           var items = localStorage.getItem('mostRecent');
+          if(items == null){
+            items = [];
+          }
           console.log(items);
           items.unshift(x);
           if(items.length >= 5){
