@@ -32,7 +32,7 @@
             if(items.includes(x)){
               const index = items.indexOf(x);
               if(index > -1){
-                items = items.splice(index, 1);
+                items.splice(index, 1);
               }
             }
             items.unshift(x);
