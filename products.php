@@ -46,6 +46,7 @@
               items = items.splice(0,5);
             }
             localStorage.setItem('mostRecent', JSON.stringify(items));
+            createCookie('mostRecentItemsCookie', String(items),'10');
           }
         }
 
@@ -59,8 +60,6 @@
             // document.cookie = name+"="+value+expires+"; path=/; domain=.sukhvir-singh.com";
             document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
         }
-
-        createCookie('cookieee', String(items),'10');
 
         // $.ajax({
         //   url:"index.php",
