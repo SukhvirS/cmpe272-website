@@ -23,7 +23,7 @@
 
       <script>
         function updateRecentlyViewed(x){
-          var items = localStorage.getItem('mostRecent');
+          var items = JSON.parse(localStorage.getItem('mostRecent'));
           if(items == null){
             items = [];
           }
@@ -33,7 +33,7 @@
             items = items.slice(0,5);
           }
 
-          localStorage.setItem('mostRecent', items);
+          localStorage.setItem('mostRecent', JSON.stringify(items));
         }
       </script>
 
