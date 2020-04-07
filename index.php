@@ -113,34 +113,34 @@
       <div>
         <h2>Most recently viewed items:</h2>
         <br>
+        
+        <div class='flex-container'></div>
+          <?php
+            require_once 'config.php';
 
-        <?php
-          require_once 'config.php';
+            $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
 
-          $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
-
-          foreach($recentItems as $key => $value){
-            $sql = "SELECT * FROM products WHERE productID = $value";
-            if($result = mysqli_query($link, $sql)){
-              while($row = mysqli_fetch_assoc($result)){
-                echo('
-                <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                  <div class="card" style="width:18rem; margin:8px 6px">
-                    <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                      <a href="" class="btn btn-primary">'.$row["price"].'</a>
+            foreach($recentItems as $key => $value){
+              $sql = "SELECT * FROM products WHERE productID = $value";
+              if($result = mysqli_query($link, $sql)){
+                while($row = mysqli_fetch_assoc($result)){
+                  echo('
+                  <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                    <div class="card" style="width:18rem; margin:8px 6px">
+                      <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                        <a href="" class="btn btn-primary">'.$row["price"].'</a>
+                      </div>
                     </div>
-                  </div>
-                </a>
-                ');
+                  </a>
+                  ');
+                }
+                mysqli_free_result($result);
               }
-              mysqli_free_result($result);
             }
-            echo("$key has the value $value");
-            echo("<br>");
-          }
-        ?>
+          ?>
+        </div>
       </div>
     </div>
     
