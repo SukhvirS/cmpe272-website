@@ -23,31 +23,38 @@
 
       <script>
         function updateRecentlyViewed(x){
-          var items = JSON.parse(localStorage.getItem('mostRecent'));
-          if(items == null){
-            items = [x];
-            localStorage.setItem('mostRecent', JSON.stringify(items));
+          // var items = JSON.parse(localStorage.getItem('mostRecent'));
+          // if(items == null){
+          //   items = [x];
+          //   localStorage.setItem('mostRecent', JSON.stringify(items));
+          // }
+          // else{
+          //   if(items.length != 5){
+          //     items.unshift(x);
+          //   }
+          //   else{
+          //     // if item in the 5 most recently viewed items, move it to the front (most recent)
+          //     if(items.includes(x)){
+          //       const index = temp.indexOf(x);
+          //       if(index > -1){
+          //         items = items.splice(index, 1);
+          //       }
+          //       items.unshift(x);
+          //     }
+          //     else{
+          //       items.unshift(x);
+          //       items = items.slice(0,5);
+          //     }
+          //   }
+          //   localStorage.setItem('mostRecent', JSON.stringify(items));
+          // }
+          var v = JSON.parse(localStorage.getItem('mostRecent'));
+          if(v == null){
+            v = [];
           }
-          else{
-            if(items.length != 5){
-              items.unshift(x);
-            }
-            else{
-              // if item in the 5 most recently viewed items, move it to the front (most recent)
-              if(items.includes(x)){
-                const index = temp.indexOf(x);
-                if(index > -1){
-                  items = items.splice(index, 1);
-                }
-                items.unshift(x);
-              }
-              else{
-                items.unshift(x);
-                items = items.slice(0,5);
-              }
-            }
-            localStorage.setItem('mostRecent', JSON.stringify(items));
-          }
+          v.push(x);
+          localStorage.setItem('mostRecent', JSON.stringify(v));
+          return;
         }
       </script>
 
