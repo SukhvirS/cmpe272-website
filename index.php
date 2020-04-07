@@ -118,9 +118,9 @@
           require_once 'config.php';
 
           $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
-          
+
           foreach($recentItems as $key => $value){
-            $sql = "SELECT * WHERE productID = $value";
+            $sql = "SELECT * FROM products WHERE productID = $value";
             if($result = mysqli_query($link, $sql)){
               while($row = mysqli_fetch_assoc($result)){
                 echo('
