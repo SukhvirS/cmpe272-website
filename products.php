@@ -42,7 +42,7 @@
           }
           items.unshift(x);
           if(items.length > 5){
-            items = items.splice(0,5);
+            items.splice(0,5);
           }
           localStorage.setItem('mostRecent', JSON.stringify(items));
         }
