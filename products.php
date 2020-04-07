@@ -22,8 +22,9 @@
     </style>
 
       <script>
+        
         function updateRecentlyViewed(x){
-          window.localstorage.setItem('mostRecentProduct', x);
+          window.localStorage.setItem('mostRecentProduct', x);
         }
       </script>
 
