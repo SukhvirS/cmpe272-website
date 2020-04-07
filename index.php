@@ -137,7 +137,6 @@
               }
               mysqli_free_result($result);
             }
-            mysqli_close($link);
             echo("$key has the value $value");
             echo("<br>");
           }
