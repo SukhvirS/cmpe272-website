@@ -11,6 +11,7 @@
       .flex-container{
         flex-wrap: wrap;
       }
+
       .card {
         transition: 0.3s;
       }
@@ -44,8 +45,8 @@
             items = items.splice(0,5);
           }
           localStorage.setItem('mostRecent', JSON.stringify(items));
-          createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
         }
+        createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
       }
 
       function createCookie(name,value,days) {
