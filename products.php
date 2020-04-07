@@ -25,15 +25,17 @@
         function updateRecentlyViewed(x){
           var items = JSON.parse(localStorage.getItem('mostRecent'));
           if(items == null){
-            items = [];
+            items = [x];
+            locaStorage.setItem('mostRecent', JSON.stringify(items));
+            return;
           }
-          if(items.length >= 1 || items.length <=4){
+          
+          if(items.length != 5){
             items.unshift(x);
           }
           else{
             // if item in the 5 most recently viewed items, move it to the front (most recent)
-            var temp = items.slice(0,5)
-            if(temp.includes(x)){
+            if(items.includes(x)){
               const index = temp.indexOf(x);
               if(index > -1){
                 items = items.splice(index, 1);
@@ -45,7 +47,6 @@
               items = items.slice(0,5);
             }
           }
-          console.log(items);
           localStorage.setItem('mostRecent', JSON.stringify(items));
         }
       </script>
