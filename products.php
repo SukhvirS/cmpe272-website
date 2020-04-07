@@ -24,12 +24,11 @@
       <script>
         function updateRecentlyViewed(x){
           var items = []
-          if(items.length == 5){
-            items = [x] + items[0:4];
+          items.unshift(x);
+          if(items.length >= 5){
+            items = items.slice(0,5);
           }
-          else{
-            items = [x] + items;
-          }
+
           localStorage.setItem('mostRecent', items);
         }
       </script>
