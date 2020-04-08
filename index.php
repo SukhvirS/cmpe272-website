@@ -132,7 +132,7 @@
       <br>
       <br>
       <div>
-        <h2>Most recently viewed items:</h2>
+        <h3>Your most recently viewed items:</h3>
         <div class='flex-container'>
           <?php
             require_once 'config.php';
