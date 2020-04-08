@@ -42,6 +42,7 @@
       function updateRecentlyViewed(x){
         var recentItems = JSON.parse(localStorage.getItem('mostRecent'));
         var popularItems = JSON.parse(localStorage.getItem('mostPopular'));
+        alert("popular:" +popularItems);
 
         // update item popularity
         if(popularItems == null){
