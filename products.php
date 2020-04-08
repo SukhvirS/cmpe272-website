@@ -28,8 +28,7 @@
     <script>
       function updateRecentlyViewed(x){
         var items = JSON.parse(localStorage.getItem('mostRecent'));
-        alert(items);
-
+        
         if(items == null){
           items = [x];
         }
