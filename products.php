@@ -40,17 +40,13 @@
             }
           }
           items.unshift(x);
-          // if(items.length > 5){
-          //   items.splice(0,5);
-          // }
           var temp = [];
           for(var i=0; i<5; i++){
             temp.push(items[i]);
           }
         }
-        console.log(temp);
-        localStorage.setItem('mostRecent', JSON.stringify(items));
-        createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
+        localStorage.setItem('mostRecent', JSON.stringify(temp));
+        createCookie('mostRecentItemsCookie', JSON.stringify(temp),'10');
       }
 
       function createCookie(name,value,days) {
