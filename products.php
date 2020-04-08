@@ -166,17 +166,19 @@
             $sql = 'SELECT * FROM products';
             if($result = mysqli_query($link, $sql)){
               while($row = mysqli_fetch_assoc($result)){
-                echo('
-                <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                  <div class="card" style="width:18rem; margin:8px 6px">
-                    <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                      <a href="" class="btn btn-primary">'.$row["price"].'</a>
+                if($row['productID'] != 3){
+                  echo('
+                  <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                    <div class="card" style="width:18rem; margin:8px 6px">
+                      <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                        <a href="" class="btn btn-primary">'.$row["price"].'</a>
+                      </div>
                     </div>
-                  </div>
-                </a>
-                ');
+                  </a>
+                  ');
+                }
               }
               mysqli_free_result($result);
             }
