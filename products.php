@@ -12,10 +12,10 @@
         flex-wrap: wrap;
       }
 
-      .recents-container{
+      /* .recents-container{
         display: flex;
         overflow-x: auto;
-      }
+      } */
 
       .card {
         transition: 0.3s;
@@ -123,7 +123,7 @@
 
     <div>
       <h2 style="padding: 0 0 0 16px">Your most recently viewed products:</h2>
-      <div class='recents-container'>
+      <div style="display: flex; overflow-x: auto;">
           <?php
             require_once 'config.php';
 
