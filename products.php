@@ -154,9 +154,11 @@
       <div>
         <h2 style="display: inline-block; position: relative; padding: 0 0 0 16px; margin: 0;">All products</h2>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="recents.php" style="display: inline-block; position: relative">Your recently viewed</a>
-        &nbsp;|&nbsp;
-        <a href="popular.php" style="display: inline-block; position: relative">Your most visited<a>
+        <div style="display: inline-block; position: relative; float: right">
+          <a href="recents.php" style="display: inline-block; position: relative">Your recently viewed</a>
+          &nbsp;|&nbsp;
+          <a href="popular.php" style="display: inline-block; position: relative">Your most visited<a>
+        </div>
       </div>
 
       <div class='flex-container'>
