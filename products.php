@@ -28,11 +28,9 @@
     <script>
       function updateRecentlyViewed(x){
         var items = JSON.parse(localStorage.getItem('mostRecent'));
-        console.log(items);
+
         if(items == null){
-          items = [];
-          items.push(x);
-          localStorage.setItem('mostRecent', JSON.stringify(items));
+          items = [x];
         }
         else{
           if(items.includes(x)){
@@ -45,8 +43,9 @@
           if(items.length > 5){
             items.splice(0,5);
           }
-          localStorage.setItem('mostRecent', JSON.stringify(items));
         }
+
+        localStorage.setItem('mostRecent', JSON.stringify(items));
         createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
       }
 
