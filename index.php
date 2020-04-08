@@ -18,7 +18,7 @@
       }
 
       .card {
-          flex: 0 0 250px;
+          flex: 0 0 280px;
           margin:8px 6px;
           transition: 0.3s;
       }
