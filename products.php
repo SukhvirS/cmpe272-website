@@ -117,7 +117,37 @@
     </nav>
 
     <div>
-      <h2 style="padding: 0 0 0 16px">Products</h2>
+      <h2 style="padding: 0 0 0 16px">Your most recently viewed products:</h2>
+      <div class='flex-container'>
+          <?php
+            require_once 'config.php';
+
+            $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
+
+            foreach($recentItems as $key => $value){
+              $sql = "SELECT * FROM products WHERE productID = $value";
+              if($result = mysqli_query($link, $sql)){
+                while($row = mysqli_fetch_assoc($result)){
+                  echo('
+                  <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                    <div class="card">
+                      <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                        <a href="" class="btn btn-primary">'.$row["price"].'</a>
+                      </div>
+                    </div>
+                  </a>
+                  ');
+                }
+                mysqli_free_result($result);
+              }
+            }
+          ?>
+          
+      </div>
+      
+      <h2 style='padding: 0 0 0 16px'>All products</h2>
       <div class='flex-container'>
           <?php
             require_once 'config.php';
