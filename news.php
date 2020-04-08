@@ -71,15 +71,12 @@
         ?>
     </nav>
 
-    <div>
-        <h2 style="padding: 0 0 0 16px">News</h2>
-        
-        <div style="padding: 0 0 0 16px">
-          <div id='loading'>
-            <p>Loading articles...</p>
-          </div> 
-          <p>All articles from the GSM Arena RSS feed</p>
-        </div>
+    <div style="padding: 0 0 0 16px">
+        <h2>News</h2>
+
+        <div id='loading'>
+          <p>Loading articles...</p>
+        </div> 
         
         <script>
           window.onload = function(){
@@ -113,6 +110,8 @@
           feedity_widget_fontcolor = "#000000";
         </script>
         <script language="JavaScript" type="text/javascript" src="https://feedity.com/js/widget.js"></script>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
