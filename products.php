@@ -22,26 +22,72 @@
     </style>
 
     <script>
-      function updateRecentlyViewed(x){
-        var items = JSON.parse(localStorage.getItem('mostRecent'));
+      function sortByValue(obj)
+      {
+        // convert object into array
+        var sortable=[];
+        for(var key in obj)
+          if(obj.hasOwnProperty(key))
+            sortable.push([key, obj[key]]); // each item is an array in format [key, value]
+        
+        // sort items by value
+        sortable.sort(function(a, b)
+        {
+          return a[1]-b[1]; // compare numbers
+        });
+        return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
+      }
 
-        if(items == null){
-          items = [x];
+
+      function updateRecentlyViewed(x){
+        var recentItems = JSON.parse(localStorage.getItem('mostRecent'));
+        var popularItems = JSON.parse(localStorage.getItem('mostPopular'));
+
+        // update item popularity
+        if(popularItems == null){
+          popularItems = {
+            1: 0;
+            2: 0;
+            3: 0;
+            4: 0;
+            5: 0;
+            6: 0;
+            7: 0;
+            8: 0;
+            9: 0;
+            10: 0;
+          }
         }
         else{
-          if(items.includes(x)){
-            const index = items.indexOf(x);
+          popularItems[x-1]++;
+          var temp = sortByValue(popularItems);
+          popularItems = temp;
+          console.log(popularItems);
+        }
+
+
+        // update recent items
+        if(recentItems == null){
+          recentItems = [x];
+        }
+        else{
+          if(recentItems.includes(x)){
+            const index = recentItems.indexOf(x);
             if(index > -1){
-              items.splice(index, 1);
+              recentItems.splice(index, 1);
             }
           }
-          items.unshift(x);
-          if(items.length > 5){
-            items = items.splice(0,5);
+          recentItems.unshift(x);
+          if(recentItems.length > 5){
+            recentItems = recentItems.splice(0,5);
           }
         }
-        localStorage.setItem('mostRecent', JSON.stringify(items));
-        createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
+
+        localStorage.setItem('mostPopular', JSON.stringify(popularItems));
+        createCookie('mostPopularItemsCookie', JSON.stringify(popularItems), '10');
+
+        localStorage.setItem('mostRecent', JSON.stringify(recentItems));
+        createCookie('mostRecentItemsCookie', JSON.stringify(recentItems),'10');
       }
 
       function createCookie(name,value,days) {
