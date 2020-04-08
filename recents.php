@@ -10,6 +10,7 @@
 
     <style>
       .flex-container{
+        display: flex;
         flex-wrap: wrap;
       }
 
