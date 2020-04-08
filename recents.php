@@ -8,6 +8,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 
+    <script>
+        var items = JSON.parse(localStorage.getItem('mostRecent'));
+
+        function updateRecentlyViewed(x){
+          if(items == null){
+            items = [x];
+            localStorage.setItem('mostRecent', JSON.stringify(items));
+          }
+          else{
+            if(items.includes(x)){
+              const index = items.indexOf(x);
+              if(index > -1){
+                items.splice(index, 1);
+              }
+            }
+            items.unshift(x);
+            if(items.length > 5){
+              items = items.splice(0,5);
+            }
+            localStorage.setItem('mostRecent', JSON.stringify(items));
+            createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
+          }
+        }
+
+        function createCookie(name,value,days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
+        }
+      </script>
+
     <title>The Phone Company</title>
 </head>
 <body>
@@ -71,6 +106,38 @@
 
         ?>
     </nav>
+
+    <div>
+        <h2 style="padding: 0 0 0 16px">Your most recently viewed products</h2>
+        <div class='flex-container'>
+          <?php
+            require_once 'config.php';
+
+            $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
+
+            foreach($recentItems as $key => $value){
+              $sql = "SELECT * FROM products WHERE productID = $value";
+              if($result = mysqli_query($link, $sql)){
+                while($row = mysqli_fetch_assoc($result)){
+                  echo('
+                  <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                    <div class="card">
+                      <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                        <a href="" class="btn btn-primary">'.$row["price"].'</a>
+                      </div>
+                    </div>
+                  </a>
+                  ');
+                }
+                mysqli_free_result($result);
+              }
+            }
+          ?>
+          
+        </div>
+
     <div>
       
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
