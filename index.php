@@ -127,7 +127,13 @@
         ?>
     </nav>
     <div>
-      <img id='home-image' src="./images/phones.png" alt="image" width="100%">  
+      <!-- <img id='home-image' src="./images/phones.png" alt="image" width="100%">   -->
+      <div class="home-body">
+        <p>Find your next phone.</p>
+        <img id='home-image' src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=500&q=60" alt="image" width="100%">  
+      </div>
+
+
       <!-- <br>
       <br>
       <br>

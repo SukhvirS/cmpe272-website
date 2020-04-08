@@ -19,6 +19,27 @@ nav h1{
     font-size: 20px;
 }
 
+.home-body{
+    text-align: center;
+}
+
+.home-body p{
+    padding: 80px 0px 50px 0;
+    margin: 0 15vw;
+    font-size: 4vw;
+}
+
+.about-body{
+    text-align: center;
+}
+
+.about-body p{
+    padding: 80px 0 50px 0;
+    margin: 0 15vw;
+    font-size: 4vw;
+}
+
+
 @media (max-width: 800px) {
     .home-body p{
         padding: 40px 0 0 0;
