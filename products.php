@@ -22,22 +22,30 @@
     </style>
 
     <script>
-      function sortByValue(obj)
-      {
-        // convert object into array
-        var sortable=[];
-        for(var key in obj)
-          if(obj.hasOwnProperty(key))
-            sortable.push([key, obj[key]]); // each item is an array in format [key, value]
+      // function sortByValue(obj)
+      // {
+      //   // convert object into array
+      //   var sortable=[];
+      //   for(var key in obj)
+      //     if(obj.hasOwnProperty(key))
+      //       sortable.push([key, obj[key]]); // each item is an array in format [key, value]
         
-        // sort items by value
-        sortable.sort(function(a, b)
-        {
-          return a[1]-b[1]; // compare numbers
-        });
-        return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
-      }
+      //   // sort items by value
+      //   sortable.sort(function(a, b)
+      //   {
+      //     return a[1]-b[1]; // compare numbers
+      //   });
+      //   return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
+      // }
 
+      function compareSecondColumn(a, b) {
+          if (a[1] === b[1]) {
+              return 0;
+          }
+          else {
+              return (a[1] < b[1]) ? -1 : 1;
+          }
+      }
 
       function updateRecentlyViewed(x){
         var recentItems = JSON.parse(localStorage.getItem('mostRecent'));
@@ -46,23 +54,27 @@
 
         // update item popularity
         if(popularItems == null){
-          popularItems = {
-            1: 0,
-            2: 0,
-            3: 0,
-            4: 0,
-            5: 0,
-            6: 0,
-            7: 0,
-            8: 0,
-            9: 0,
-            10: 0,
-          }
+          popularItems = [
+            [1:0],
+            [2:0],
+            [3:0],
+            [4:0],
+            [5:0],
+            [6:0],
+            [7:0],
+            [8:0],
+            [9:0],
+            [10:0],
+          ];
         }
         else{
-          popularItems[x-1]++;
-          var temp = sortByValue(popularItems);
-          popularItems = temp;
+          for(var i=0; i<popularItems.length; i++){
+            if(popularItems[i][0] == x){
+              popularItems[i][1] += 1;
+              break;
+            }
+          }
+          popularItems.sort(compareSecondColumn);
           console.log(popularItems);
         }
 
