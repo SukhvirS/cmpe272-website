@@ -125,7 +125,7 @@
     </nav>
 
     <div>
-        <h2 style="padding: 0 0 0 16px">5 most popular products</h2>
+        <h2 style="padding: 0 0 0 16px">Your 5 most visited products</h2>
         <div class='flex-container'>
           <?php
             require_once 'config.php';

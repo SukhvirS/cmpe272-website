@@ -158,7 +158,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="recents.php" style="display: inline-block; position: relative">Your recently viewed</a>
         &nbsp;|&nbsp;
-        <a href="popular.php" style="display: inline-block; position: relative">Most popular<a>
+        <a href="popular.php" style="display: inline-block; position: relative">Your most visited<a>
       </div>
 
       <div class='flex-container'>
