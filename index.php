@@ -128,7 +128,7 @@
     </nav>
     <div>
       <img id='home-image' src="./images/phones.png" alt="image" width="100%">  
-      <br>
+      <!-- <br>
       <br>
       <br>
       <div>
@@ -160,7 +160,7 @@
             }
           ?>
           
-        </div>
+        </div> -->
       </div>
     </div>
     
