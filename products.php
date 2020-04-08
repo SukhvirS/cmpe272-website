@@ -43,8 +43,12 @@
           // if(items.length > 5){
           //   items.splice(0,5);
           // }
+          var temp = [];
+          for(var i=0; i<5; i++){
+            temp.push(items[i]);
+          }
         }
-        console.log(items);
+        console.log(temp);
         localStorage.setItem('mostRecent', JSON.stringify(items));
         createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
       }
