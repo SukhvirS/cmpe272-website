@@ -133,8 +133,9 @@
             $popularItems = json_decode($_COOKIE['mostPopularItemsCookie']);
 
             for($i = 0; $i<5; $i++){
-                echo($popularItems[$i][0]);
-                $sql = "SELECT * FROM products WHERE productID = $popularItems[$i][0]";
+                $prodID = $popularItems[$i][0];
+                echo($prodID);
+                $sql = "SELECT * FROM products WHERE productID = $prodID";
                 if($result = mysqli_query($link, $sql)){
                     while($row = mysqli_fetch_assoc($result)){
                     echo('
