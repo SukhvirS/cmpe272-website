@@ -77,39 +77,41 @@
         <div id='loading'>
           <p>Loading articles...</p>
         </div> 
-        
+
         <script>
           window.onload = function(){
             document.getElementById('loading').style.display = 'none';
           };
         </script>
 
-        <script language="JavaScript" type="text/javascript">
-          // Customize the widget by editing the fields below
-          // All fields are required
-      
-          // Your Feedity RSS feed URL
-          feedity_widget_feed = "http://www.gsmarena.com/rss-news-reviews.php3";
-      
-          // Number of items to display in the widget
-          feedity_widget_numberofitems = "10";
-      
-          // Show feed item description (values: yes or no)
-          feedity_widget_showdescription = "no";
-      
-          // Show feed item published date (values: yes or no)
-          feedity_widget_showdate = "yes";
-      
-          // Widget box width (in px, pt, em, or %)
-          feedity_widget_width = "100%";
-      
-          // Widget box background color in hex or by name (eg: #ffffff or white)
-          feedity_widget_backcolor = "#ffffff";
-      
-          // Widget text & link color in hex or by name (eg: #000000 or black)
-          feedity_widget_fontcolor = "#000000";
-        </script>
-        <script language="JavaScript" type="text/javascript" src="https://feedity.com/js/widget.js"></script>
+        <div style="padding: 0 0 0 -4px">
+          <script language="JavaScript" type="text/javascript">
+            // Customize the widget by editing the fields below
+            // All fields are required
+        
+            // Your Feedity RSS feed URL
+            feedity_widget_feed = "http://www.gsmarena.com/rss-news-reviews.php3";
+        
+            // Number of items to display in the widget
+            feedity_widget_numberofitems = "10";
+        
+            // Show feed item description (values: yes or no)
+            feedity_widget_showdescription = "no";
+        
+            // Show feed item published date (values: yes or no)
+            feedity_widget_showdate = "yes";
+        
+            // Widget box width (in px, pt, em, or %)
+            feedity_widget_width = "100%";
+        
+            // Widget box background color in hex or by name (eg: #ffffff or white)
+            feedity_widget_backcolor = "#ffffff";
+        
+            // Widget text & link color in hex or by name (eg: #000000 or black)
+            feedity_widget_fontcolor = "#000000";
+          </script>
+          <script language="JavaScript" type="text/javascript" src="https://feedity.com/js/widget.js"></script>
+        </div>
 
         <p>All articles from the GSM Arena RSS feed</p>
     </div>
