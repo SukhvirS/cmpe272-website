@@ -160,6 +160,7 @@
           <a href="popular.php">Your most visited<a>
         </div>
       </div>
+      <br>
 
       <div class='flex-container'>
           <?php
