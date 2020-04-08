@@ -127,10 +127,10 @@
         ?>
     </nav>
     <div>
-      <!-- <img id='home-image' src="./images/phones.png" alt="image" width="100%">   -->
-      <div class="home-body">
+      <img id='home-image' src="./images/phones.png" alt="image" width="100%">  
+      <!-- <div class="home-body">
         <img id='home-image' src="/images/phones.png" alt="image" width="100%">  
-      </div>
+      </div> -->
 
 
       <!-- <br>
