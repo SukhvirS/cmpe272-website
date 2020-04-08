@@ -117,7 +117,7 @@
     </nav>
 
     <div>
-      <h2>Products</h2>
+      <h2 style="padding: 0 0 0 16px">Products</h2>
       <div class='flex-container'>
           <?php
             require_once 'config.php';

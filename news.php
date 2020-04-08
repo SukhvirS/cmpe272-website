@@ -72,7 +72,7 @@
     </nav>
 
     <div>
-        <h2>News</h2>
+        <h2 style="padding: 0 0 0 16px">News</h2>
 
         <div id='loading'>
           <p>Loading articles...</p>

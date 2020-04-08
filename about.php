@@ -71,7 +71,7 @@
         ?>
     </nav>
     <div class='about-body'>
-        <h2>About</h2>
+        <h2 style="padding: 0 0 0 16px">About</h2>
         <p><mark>The Phone Company</mark> is an online store where users can buy the newest smartphones at competetive prices. This website makes the process of getting a smartphone fast and easy.</p>
         <img src="https://static.vecteezy.com/system/resources/previews/000/326/299/large_2x/llustration-of-an-emoticon-vector.jpg" alt="" width="200px">
     </div>
