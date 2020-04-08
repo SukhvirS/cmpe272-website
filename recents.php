@@ -7,6 +7,23 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    
+    <style>
+      .flex-container{
+        flex-wrap: wrap;
+      }
+
+      .card {
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      .container {
+        padding: 2px 16px;
+      }
 
     <script>
         var items = JSON.parse(localStorage.getItem('mostRecent'));
