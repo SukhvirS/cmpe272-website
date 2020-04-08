@@ -25,40 +25,77 @@
       }
     </style>
 
-    <script>
-        var items = JSON.parse(localStorage.getItem('mostRecent'));
-
-        function updateRecentlyViewed(x){
-          if(items == null){
-            items = [x];
-            localStorage.setItem('mostRecent', JSON.stringify(items));
+<script>
+      function compareSecondColumn(a, b) {
+          if (a[1] === b[1]) {
+              return 0;
           }
-          else{
-            if(items.includes(x)){
-              const index = items.indexOf(x);
-              if(index > -1){
-                items.splice(index, 1);
-              }
+          else {
+              return (a[1] > b[1]) ? -1 : 1;
+          }
+      }
+
+      function createCookie(name,value,days) {
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime()+(days*24*60*60*1000));
+              var expires = "; expires="+date.toGMTString();
+          }
+          else var expires = "";
+          document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
+      }
+
+      function updateRecentlyViewed(x){
+        var recentItems = JSON.parse(localStorage.getItem('mostRecent'));
+        var popularItems = JSON.parse(localStorage.getItem('mostPopular'));
+
+        // update item popularity
+        if(popularItems == null){
+          popularItems = [
+            [1,0],
+            [2,0],
+            [3,0],
+            [4,0],
+            [5,0],
+            [6,0],
+            [7,0],
+            [8,0],
+            [9,0],
+            [10,0],
+          ];
+        }
+        for(var i=0; i<popularItems.length; i++){
+          if(popularItems[i][0] == x){
+            popularItems[i][1] += 1;
+            break;
+          }
+        }
+        popularItems.sort(compareSecondColumn);
+
+        // update recent items
+        if(recentItems == null){
+          recentItems = [x];
+        }
+        else{
+          if(recentItems.includes(x)){
+            const index = recentItems.indexOf(x);
+            if(index > -1){
+              recentItems.splice(index, 1);
             }
-            items.unshift(x);
-            if(items.length > 5){
-              items = items.splice(0,5);
-            }
-            localStorage.setItem('mostRecent', JSON.stringify(items));
-            createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
+          }
+          recentItems.unshift(x);
+          if(recentItems.length > 5){
+            recentItems = recentItems.splice(0,5);
           }
         }
 
-        function createCookie(name,value,days) {
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime()+(days*24*60*60*1000));
-                var expires = "; expires="+date.toGMTString();
-            }
-            else var expires = "";
-            document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
-        }
-      </script>
+        localStorage.setItem('mostPopular', JSON.stringify(popularItems));
+        createCookie('mostPopularItemsCookie', JSON.stringify(popularItems), '10');
+
+        localStorage.setItem('mostRecent', JSON.stringify(recentItems));
+        createCookie('mostRecentItemsCookie', JSON.stringify(recentItems),'10');
+      }
+    </script>
 
     <title>The Phone Company</title>
 </head>
