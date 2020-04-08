@@ -130,7 +130,12 @@
           <?php
             require_once 'config.php';
 
-            $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
+            $popularItems = json_decode($_COOKIE['mostPopularItemsCookie']);
+
+            for($i = 0; $i<5; $i++){
+                echo($popularItems[$i]);
+            }
+
 
             foreach($recentItems as $key => $value){
               $sql = "SELECT * FROM products WHERE productID = $value";
