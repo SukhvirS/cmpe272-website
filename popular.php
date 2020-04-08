@@ -134,7 +134,6 @@
 
             for($i = 0; $i<5; $i++){
                 $prodID = $popularItems[$i][0];
-                echo($prodID);
                 $sql = "SELECT * FROM products WHERE productID = $prodID";
                 if($result = mysqli_query($link, $sql)){
                     while($row = mysqli_fetch_assoc($result)){
