@@ -117,10 +117,10 @@
     </nav>
 
     <div>
-      <div style='display: inline-block'>
-        <h2 style="position: relative; padding: 0;margin: 0;">All products</h2>
+      <div>
+        <h2 style="display: inline-block; position: relative; padding: 0 0 0 16px; margin: 0;">All products</h2>
         &nbsp;&nbsp;
-        <a href="recents.php" style="position: relative">Your recently viewed ></a>
+        <a href="recents.php" style="display: inline-block; position: relative">Your recently viewed ></a>
       </div>
 
       <div class='flex-container'>
