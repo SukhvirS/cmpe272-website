@@ -134,11 +134,7 @@
 
             for($i = 0; $i<5; $i++){
                 echo($popularItems[$i]);
-            }
-
-
-            foreach($recentItems as $key => $value){
-              $sql = "SELECT * FROM products WHERE productID = $value";
+                $sql = "SELECT * FROM products WHERE productID = $popularItems[$i][0]";
               if($result = mysqli_query($link, $sql)){
                 while($row = mysqli_fetch_assoc($result)){
                   echo('
@@ -156,6 +152,7 @@
                 mysqli_free_result($result);
               }
             }
+
           ?>
           
         </div>
