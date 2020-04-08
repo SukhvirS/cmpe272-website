@@ -118,6 +118,10 @@
 
     <div>
       <h2 style='padding: 0 0 0 16px'>All products</h2>
+      <div style="width: 100%">
+        <span style="float:left"><h2>All Products</h2></span>
+        <span style="float: right"><a href="recents.php">Your recently viewed</a></span>
+      </div>
       <div class='flex-container'>
           <?php
             require_once 'config.php';
