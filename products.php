@@ -30,7 +30,8 @@
         var items = JSON.parse(localStorage.getItem('mostRecent'));
         console.log(items);
         if(items == null){
-          items = [x];
+          items = [];
+          items.push(x);
           localStorage.setItem('mostRecent', JSON.stringify(items));
         }
         else{
