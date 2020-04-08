@@ -154,7 +154,7 @@
       <div>
         <h2 style="display: inline-block; position: relative; padding: 0 0 0 16px; margin: 0;">All products</h2>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <div style="display: inline-block; position: relative; float: right; margin: 0 50px 0 0">
+        <div style="display: inline-block; position: relative; float: right; margin: 0 80px 0 0">
           <a href="recents.php">Your recently viewed</a>
           &nbsp;|&nbsp;
           <a href="popular.php">Your most visited<a>
