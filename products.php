@@ -33,17 +33,16 @@
           items = [x];
         }
         else{
+          if(items.includes(x)){
+            const index = items.indexOf(x);
+            if(index > -1){
+              items.splice(index, 1);
+            }
+          }
           items.unshift(x);
-          // if(items.includes(x)){
-          //   const index = items.indexOf(x);
-          //   if(index > -1){
-          //     items.splice(index, 1);
-          //   }
-          // }
-          // items.unshift(x);
-          // if(items.length > 5){
-          //   items.splice(0,5);
-          // }
+          if(items.length > 5){
+            items.splice(0,5);
+          }
         }
 
         localStorage.setItem('mostRecent', JSON.stringify(items));
