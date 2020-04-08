@@ -15,15 +15,13 @@
       }
 
       .card {
-        transition: 0.3s;
+          flex: 0 0 18rem;
+          margin:8px 6px;
+          transition: 0.3s;
       }
 
       .card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      }
-
-      .container {
-        padding: 2px 16px;
       }
     </style>
 
