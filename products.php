@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <style>
+      .flex-container{
+        flex-wrap: wrap;
+      }
+
+      .recents-container{
+        display: flex;
+        overflow-x: auto;
+      }
+
       .card {
         transition: 0.3s;
       }
@@ -114,7 +123,7 @@
 
     <div>
       <h2 style="padding: 0 0 0 16px">Your most recently viewed products:</h2>
-      <div class='flex-container' style="overflow-x: auto;">
+      <div class='recents-container'>
           <?php
             require_once 'config.php';
 
@@ -144,7 +153,7 @@
       </div>
       
       <h2 style='padding: 0 0 0 16px'>All products</h2>
-      <div class='flex-container' style="flex-wrap: wrap;">
+      <div class='flex-container'>
           <?php
             require_once 'config.php';
 
