@@ -117,10 +117,11 @@
     </nav>
 
     <div>
-      <div style='padding: 0 0 0 16px'>
-        <h2>All products</h2>&nbsp;&nbsp;
+      <div style='padding: 0 0 0 16px; display: inline-block'>
+        <h2>All products &nbsp;&nbsp;</h2>
         <a href="recents.php">Your recently viewed</a>
       </div>
+
       <div class='flex-container'>
           <?php
             require_once 'config.php';
