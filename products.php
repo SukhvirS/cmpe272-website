@@ -128,7 +128,7 @@
                 echo('
                 <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
                   <div class="card" style="width:200px; margin:8px 6px">
-                    <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                    <img src="'.$row["img1Url"].'" alt="..." height="300px" style="display: block; margin: 20px auto 0 auto">
                     <div class="card-body">
                       <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
                       <a href="" class="btn btn-primary">'.$row["price"].'</a>
