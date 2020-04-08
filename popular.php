@@ -133,12 +133,12 @@
             $popularItems = json_decode($_COOKIE['mostPopularItemsCookie']);
 
             for($i = 0; $i<5; $i++){
-                // if($popularItems[$i][1] == 0){
-                //     if($i == 0){
-                //         echo("You haven't visited any products");
-                //     }
-                //     break;
-                // }
+                if($popularItems[$i][1] == 0){
+                    if($i == 0){
+                        echo("You haven't visited any products");
+                    }
+                    break;
+                }
                 $prodID = $popularItems[$i][0];
                 $sql = "SELECT * FROM products WHERE productID = $prodID";
                 if($result = mysqli_query($link, $sql)){

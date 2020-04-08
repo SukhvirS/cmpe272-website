@@ -50,15 +50,13 @@
             [10,0],
           ];
         }
-        else{
-          for(var i=0; i<popularItems.length; i++){
-            if(popularItems[i][0] == x){
-              popularItems[i][1] += 1;
-              break;
-            }
+        for(var i=0; i<popularItems.length; i++){
+          if(popularItems[i][0] == x){
+            popularItems[i][1] += 1;
+            break;
           }
-          popularItems.sort(compareSecondColumn);
         }
+        popularItems.sort(compareSecondColumn);
 
         // update recent items
         if(recentItems == null){
