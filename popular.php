@@ -25,78 +25,6 @@
       }
     </style>
 
-    <!-- <script>
-      function compareSecondColumn(a, b) {
-          if (a[1] === b[1]) {
-              return 0;
-          }
-          else {
-              return (a[1] > b[1]) ? -1 : 1;
-          }
-      }
-
-      function createCookie(name,value,days) {
-          if (days) {
-              var date = new Date();
-              date.setTime(date.getTime()+(days*24*60*60*1000));
-              var expires = "; expires="+date.toGMTString();
-          }
-          else var expires = "";
-          document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
-      }
-
-      function updateRecentlyViewed(x){
-        var recentItems = JSON.parse(localStorage.getItem('mostRecent'));
-        var popularItems = JSON.parse(localStorage.getItem('mostPopular'));
-
-        // update item popularity
-        if(popularItems == null){
-          popularItems = [
-            [1,0],
-            [2,0],
-            [3,0],
-            [4,0],
-            [5,0],
-            [6,0],
-            [7,0],
-            [8,0],
-            [9,0],
-            [10,0],
-          ];
-        }
-        for(var i=0; i<popularItems.length; i++){
-          if(popularItems[i][0] == x){
-            popularItems[i][1] += 1;
-            break;
-          }
-        }
-        popularItems.sort(compareSecondColumn);
-
-        // update recent items
-        if(recentItems == null){
-          recentItems = [x];
-        }
-        else{
-          if(recentItems.includes(x)){
-            const index = recentItems.indexOf(x);
-            if(index > -1){
-              recentItems.splice(index, 1);
-            }
-          }
-          recentItems.unshift(x);
-          if(recentItems.length > 5){
-            recentItems = recentItems.splice(0,5);
-          }
-        }
-
-        localStorage.setItem('mostPopular', JSON.stringify(popularItems));
-        createCookie('mostPopularItemsCookie', JSON.stringify(popularItems), '10');
-
-        localStorage.setItem('mostRecent', JSON.stringify(recentItems));
-        createCookie('mostRecentItemsCookie', JSON.stringify(recentItems),'10');
-      }
-    </script> -->
-
     <title>The Phone Company</title>
 </head>
 <body>
@@ -174,7 +102,6 @@
             }
             else{
               $allPopular = unserialize($_COOKIE['mostPopularProducts'], ["allowed_classes" => false]);
-              print_r($allPopular);
 
               $i = 0;
               foreach($allPopular as $key => $value){
@@ -203,58 +130,9 @@
                 }
                 $i++;
               }
-
-              // for($i = 0; $i < 5; $i++){
-              //   $sql = "SELECT * FROM products WHERE productID = $allRecents[$i]";
-              //   if($result = mysqli_query($link, $sql)){
-              //     while($row = mysqli_fetch_assoc($result)){
-              //       echo('
-              //       <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-              //         <div class="card">
-              //           <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-              //           <div class="card-body">
-              //             <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-              //             <a href="" class="btn btn-primary">'.$row["price"].'</a>
-              //           </div>
-              //         </div>
-              //       </a>
-              //       ');
-              //     }
-              //     mysqli_free_result($result);
-              //   }
-              // }
-
             }
 
 
-            // $popularItems = json_decode($_COOKIE['mostPopularItemsCookie']);
-
-            // for($i = 0; $i<5; $i++){
-            //     if($popularItems[$i][1] == 0){
-            //         if($i == 0){
-            //             echo("You haven't visited any products");
-            //         }
-            //         break;
-            //     }
-            //     $prodID = $popularItems[$i][0];
-            //     $sql = "SELECT * FROM products WHERE productID = $prodID";
-            //     if($result = mysqli_query($link, $sql)){
-            //         while($row = mysqli_fetch_assoc($result)){
-            //         echo('
-            //         <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-            //             <div class="card">
-            //             <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-            //             <div class="card-body">
-            //                 <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-            //                 <a href="" class="btn btn-primary">'.$row["price"].'</a>
-            //             </div>
-            //             </div>
-            //         </a>
-            //         ');
-            //         }
-            //         mysqli_free_result($result);
-            //     }
-            // }
 
           ?>
           
