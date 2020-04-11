@@ -174,6 +174,7 @@
             }
             else{
               $allPopular = unserialize($_COOKIE['mostPopularProducts'], ["allowed_classes" => false]);
+              print_r($allPopular);
 
               foreach($allPopular as $key => $vlaue){
                 if($value == 0){
