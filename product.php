@@ -125,7 +125,6 @@
 
             require_once 'config.php';
 
-
             $allRecents = array();
             if(isset($_COOKIE['mostRecentProducts'])) {
               $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
