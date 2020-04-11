@@ -173,8 +173,9 @@
 
             // $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
 
-            foreach($allRecents as $key => $value){
-              $sql = "SELECT * FROM products WHERE productID = $value";
+            // foreach($allRecents as $key => $value){
+            for($i = 0; $i < 5; $i++){
+              $sql = "SELECT * FROM products WHERE productID = $allRecents[$i]";
               if($result = mysqli_query($link, $sql)){
                 while($row = mysqli_fetch_assoc($result)){
                   echo('

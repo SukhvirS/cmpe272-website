@@ -130,9 +130,6 @@
               $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
             }
 
-            // $key = array_search($index, $allRecents);
-            // unset($allRecents[$key]);
-            // $allRecents = array_values($allRecents);
             if (($key = array_search($index, $allRecents)) !== false) {
               unset($allRecents[$key]);
             }
