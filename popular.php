@@ -177,9 +177,9 @@
               print_r($allPopular);
 
               foreach($allPopular as $key => $vlaue){
-                // if($value == 0){
-                //   break;
-                // }
+                if($value == 0){
+                  break;
+                }
                 $sql = "SELECT * FROM products WHERE productID = $key";
                 if($result = mysqli_query($link, $sql)){
                   while($row = mysqli_fetch_assoc($result)){
