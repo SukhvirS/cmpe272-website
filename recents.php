@@ -173,7 +173,7 @@
               echo "You haven't viewed any products recently";
             } else {
               array_unshift($allRecents, $_COOKIE["productClicked"]);
-              echo($allRecents);
+              print_r($allRecents);
             }
 
             $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
