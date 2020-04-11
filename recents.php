@@ -169,6 +169,7 @@
 
             $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
             print_r($allRecents);
+            echo('<br>');
 
             // $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
 
