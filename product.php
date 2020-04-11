@@ -131,7 +131,7 @@
               $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
             }
 
-            print_r("all recents products:".$allRecents);
+            print_r($allRecents);
 
             array_unshift($allRecents, $index);
 
