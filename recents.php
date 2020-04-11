@@ -168,12 +168,7 @@
             require_once 'config.php';
 
             $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
-            print_r($allRecents);
-            echo('<br>');
 
-            // $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
-
-            // foreach($allRecents as $key => $value){
             for($i = 0; $i < 5; $i++){
               $sql = "SELECT * FROM products WHERE productID = $allRecents[$i]";
               if($result = mysqli_query($link, $sql)){
