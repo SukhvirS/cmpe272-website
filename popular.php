@@ -176,29 +176,26 @@
               $allPopular = unserialize($_COOKIE['mostPopularProducts'], ["allowed_classes" => false]);
               print_r($allPopular);
 
-              foreach($allPopular as $key => $vlaue){
+              foreach($allPopular as $key => $value){
                 if($value == 0){
                   break;
                 }
-                else{
-                  $sql = "SELECT * FROM products WHERE productID = $key";
-                  if($result = mysqli_query($link, $sql)){
-                    while($row = mysqli_fetch_assoc($result)){
-                      echo('
-                      <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                        <div class="card">
-                          <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                          <div class="card-body">
-                            <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                            <a href="" class="btn btn-primary">'.$row["price"].'</a>
-                          </div>
+                $sql = "SELECT * FROM products WHERE productID = $key";
+                if($result = mysqli_query($link, $sql)){
+                  while($row = mysqli_fetch_assoc($result)){
+                    echo('
+                    <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                      <div class="card">
+                        <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                          <a href="" class="btn btn-primary">'.$row["price"].'</a>
                         </div>
-                      </a>
-                      ');
-                    }
-                    mysqli_free_result($result);
+                      </div>
+                    </a>
+                    ');
                   }
-
+                  mysqli_free_result($result);
                 }
 
               }
