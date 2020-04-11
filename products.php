@@ -21,7 +21,7 @@
       }
     </style>
 
-    <script>
+    <!-- <script>
       function compareSecondColumn(a, b) {
           if (a[1] === b[1]) {
               return 0;
@@ -91,7 +91,7 @@
         localStorage.setItem('mostRecent', JSON.stringify(recentItems));
         createCookie('mostRecentItemsCookie', JSON.stringify(recentItems),'10');
       }
-    </script>
+    </script> -->
 
     <title>Products</title>
 </head>
@@ -170,7 +170,8 @@
             if($result = mysqli_query($link, $sql)){
               while($row = mysqli_fetch_assoc($result)){
                 echo('
-                <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                // <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'">
                   <div class="card" style="width:18rem; margin:8px 6px">
                     <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
                     <div class="card-body">
