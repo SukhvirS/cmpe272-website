@@ -167,6 +167,15 @@
           <?php
             require_once 'config.php';
 
+            $cookie_name = "productClicked";
+
+            if(!isset($_COOKIE[$cookie_name])) {
+                echo "Cookie named '" . $cookie_name . "' is not set!";
+            } else {
+                echo "Cookie '" . $cookie_name . "' is set!<br>";
+                echo "Value is: " . $_COOKIE[$cookie_name];
+            }
+
             $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
 
             foreach($recentItems as $key => $value){
