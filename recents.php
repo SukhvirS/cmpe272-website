@@ -172,7 +172,7 @@
             if(!isset($_COOKIE["productClicked"])) {
               echo "You haven't viewed any products recently";
             } else {
-              array_unshift($allRecents, $_COOKIE["productClicked"]);
+              array_push($allRecents, $_COOKIE["productClicked"]);
               print_r($allRecents);
             }
 
