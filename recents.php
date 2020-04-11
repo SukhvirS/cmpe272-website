@@ -167,13 +167,13 @@
           <?php
             require_once 'config.php';
 
-            $cookie_name = "productClicked";
+            $allRecents = array();
 
-            if(!isset($_COOKIE[$cookie_name])) {
-                echo "Cookie named '" . $cookie_name . "' is not set!";
+            if(!isset($_COOKIE["productClicked"])) {
+              echo "You haven't viewed any products recently";
             } else {
-                echo "Cookie '" . $cookie_name . "' is set!<br>";
-                echo "Value is: " . $_COOKIE[$cookie_name];
+              array_unshift($allRecents, $_COOKIE["productClicked"]);
+              echo($allRecents);
             }
 
             $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
