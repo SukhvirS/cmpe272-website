@@ -168,7 +168,7 @@
             require_once 'config.php';
 
             if(!isset($_COOKIE['mostRecentProducts'])){
-              echo("You haven't viewed any products recently.")
+              echo("You haven't viewed any products recently.");
             }
             else{
               $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
