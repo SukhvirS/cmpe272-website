@@ -125,6 +125,7 @@
 
             require_once 'config.php';
 
+            // update recents
             $allRecents = array();
             if(isset($_COOKIE['mostRecentProducts'])) {
               $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
@@ -134,8 +135,28 @@
               unset($allRecents[$key]);
             }
             array_unshift($allRecents, $index);
-
             setcookie("mostRecentProducts", serialize($allRecents), time() + (86400 * 5)); // 5 days
+
+            // update popular products
+            $allPopular = [
+              1 => 0,
+              2 => 0,
+              3 => 0,
+              4 => 0,
+              5 => 0,
+              6 => 0,
+              7 => 0,
+              8 => 0,
+              9 => 0,
+              10 => 0,
+            ];
+            if(isset($_COOKIE['mostPopularProducts'])){
+              $allPopular = unserialize($_COOKIE['mostPopularProducts'], ['allowed_classes' => false]);
+            }
+            $allPopular[$index] += 1;
+            arsort($allPopular);
+            setcookie("mostPopularProducts", serialize($allPopular), time() + (86400 * 5)); // 5 days
+
 
             $sql = "SELECT * FROM products WHERE productID = '$index'";
             $result = mysqli_query($link, $sql);
