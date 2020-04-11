@@ -25,7 +25,7 @@
       }
     </style>
 
-    <script>
+    <!-- <script>
       function compareSecondColumn(a, b) {
           if (a[1] === b[1]) {
               return 0;
@@ -95,7 +95,7 @@
         localStorage.setItem('mostRecent', JSON.stringify(recentItems));
         createCookie('mostRecentItemsCookie', JSON.stringify(recentItems),'10');
       }
-    </script>
+    </script> -->
 
     <title>The Phone Company</title>
 </head>
@@ -167,36 +167,30 @@
           <?php
             require_once 'config.php';
 
-            $allRecents = array();
+            $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
+            print_r($allRecents);
 
-            if(!isset($_COOKIE["productClicked"])) {
-              echo "You haven't viewed any products recently";
-            } else {
-              array_push($allRecents, $_COOKIE["productClicked"]);
-              print_r($allRecents);
-            }
+            // $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
 
-            $recentItems = json_decode($_COOKIE['mostRecentItemsCookie']);
-
-            foreach($recentItems as $key => $value){
-              $sql = "SELECT * FROM products WHERE productID = $value";
-              if($result = mysqli_query($link, $sql)){
-                while($row = mysqli_fetch_assoc($result)){
-                  echo('
-                  <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                    <div class="card">
-                      <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                        <a href="" class="btn btn-primary">'.$row["price"].'</a>
-                      </div>
-                    </div>
-                  </a>
-                  ');
-                }
-                mysqli_free_result($result);
-              }
-            }
+            // foreach($recentItems as $key => $value){
+            //   $sql = "SELECT * FROM products WHERE productID = $value";
+            //   if($result = mysqli_query($link, $sql)){
+            //     while($row = mysqli_fetch_assoc($result)){
+            //       echo('
+            //       <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+            //         <div class="card">
+            //           <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+            //           <div class="card-body">
+            //             <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+            //             <a href="" class="btn btn-primary">'.$row["price"].'</a>
+            //           </div>
+            //         </div>
+            //       </a>
+            //       ');
+            //     }
+            //     mysqli_free_result($result);
+            //   }
+            // }
           ?>
           
         </div>

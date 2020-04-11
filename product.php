@@ -125,7 +125,11 @@
 
             require_once 'config.php';
 
-            setcookie("productClicked", $index, time() + (86400 * 5)); // 5 days
+            $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
+
+            array_unshift($allRecents, $index);
+
+            setcookie("mostRecentProducts", serialize($allRecents), time() + (86400 * 5)); // 5 days
 
             $sql = "SELECT * FROM products WHERE productID = '$index'";
             $result = mysqli_query($link, $sql);
