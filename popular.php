@@ -176,7 +176,11 @@
               $allPopular = unserialize($_COOKIE['mostPopularProducts'], ["allowed_classes" => false]);
               print_r($allPopular);
 
+              $i = 0;
               foreach($allPopular as $key => $value){
+                if($i >= 5){
+                  break;
+                }
                 if($value == 0){
                   break;
                 }
@@ -197,7 +201,7 @@
                   }
                   mysqli_free_result($result);
                 }
-
+                $i++;
               }
 
               // for($i = 0; $i < 5; $i++){
