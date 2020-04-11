@@ -177,7 +177,7 @@
               print_r($allPopular);
 
               foreach($allPopular as $key => $vlaue){
-                if($value == 0){
+                if($value == '0'){
                   break;
                 }
                 $sql = "SELECT * FROM products WHERE productID = $key";
