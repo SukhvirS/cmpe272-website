@@ -125,7 +125,12 @@
 
             require_once 'config.php';
 
-            $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
+
+            $allRecents = array();
+            if(isset($_COOKIE['mostRecentProducts'])) {
+              $allRecents = unserialize($_COOKIE['mostRecentProducts'], ["allowed_classes" => false]);
+            }
+
             print_r("all recents products:".$allRecents);
 
             array_unshift($allRecents, $index);
