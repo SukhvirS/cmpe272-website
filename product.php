@@ -139,7 +139,7 @@
 
             // update popular products
             $allPopular = [
-              1 => 0,
+              1 => 1,
               2 => 0,
               3 => 0,
               4 => 0,
