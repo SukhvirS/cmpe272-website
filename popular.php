@@ -115,6 +115,7 @@
                 if($result = mysqli_query($link, $sql)){
                   while($row = mysqli_fetch_assoc($result)){
                     echo('
+                    <h2>'.$i.'</h2>
                     <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
                       <div class="card">
                         <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
