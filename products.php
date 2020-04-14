@@ -85,7 +85,7 @@
         <div style="display: inline-block; position: relative; float: right; margin: 0 80px 0 0">
           <a href="recents.php">Your recently viewed</a>
           &nbsp;|&nbsp;
-          <a href="popular.php">Your most visited<a>
+          <a href="popular.php">Most visited<a>
         </div>
       </div>
       <br>
