@@ -107,36 +107,17 @@
                 $sql = "SELECT * FROM products WHERE productID = $allRecents[$i]";
                 if($result = mysqli_query($link, $sql)){
                   while($row = mysqli_fetch_assoc($result)){
-                    if($i == 0){
-                      echo('
-                      <h2 style="padding: 0 0 0 16px">Your last viewed item:<h2>
-                      <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                        <div class="card">
-                          <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                          <div class="card-body">
-                            <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                            <a href="" class="btn btn-primary">'.$row["price"].'</a>
-                          </div>
+                    echo('
+                    <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
+                      <div class="card">
+                        <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
+                          <a href="" class="btn btn-primary">'.$row["price"].'</a>
                         </div>
-                      </a>
-                      <br>
-                      <br>
-                      <br>
-                      ');
-                    }
-                    else{
-                      echo('
-                      <a href="product.php?name='.str_replace(' ','-',$row["name"]).'&index='.$row["productID"].'" onclick="updateRecentlyViewed('.$row["productID"].')">
-                        <div class="card">
-                          <img src="'.$row["img1Url"].'" alt="..." height="200px" style="display: block; margin: 20px auto 0 auto">
-                          <div class="card-body">
-                            <h5 class="card-title" style="color: black">'.$row["name"].'</h5>
-                            <a href="" class="btn btn-primary">'.$row["price"].'</a>
-                          </div>
-                        </div>
-                      </a>
-                      ');
-                    }
+                      </div>
+                    </a>
+                    ');
                   }
                   mysqli_free_result($result);
                 }
