@@ -28,41 +28,6 @@
       }
     </style>
 
-    <script>
-        var items = JSON.parse(localStorage.getItem('mostRecent'));
-
-        function updateRecentlyViewed(x){
-          if(items == null){
-            items = [x];
-            localStorage.setItem('mostRecent', JSON.stringify(items));
-          }
-          else{
-            if(items.includes(x)){
-              const index = items.indexOf(x);
-              if(index > -1){
-                items.splice(index, 1);
-              }
-            }
-            items.unshift(x);
-            if(items.length > 5){
-              items = items.splice(0,5);
-            }
-            localStorage.setItem('mostRecent', JSON.stringify(items));
-            createCookie('mostRecentItemsCookie', JSON.stringify(items),'10');
-          }
-        }
-
-        function createCookie(name,value,days) {
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime()+(days*24*60*60*1000));
-                var expires = "; expires="+date.toGMTString();
-            }
-            else var expires = "";
-            document.cookie = escape(name) + "=" +  escape(value) + expires + "; path=/"; 
-        }
-      </script>
-
     <title>The Phone Company</title>
 </head>
 <body>
