@@ -16,6 +16,11 @@
 
     if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_assoc($result)){
+            echo($row['firstName']);
+            echo($row['lastName']);
+            echo($row['address']);
+            echo($row['email']);
+            echo($row['cellPhone']);
             $result += $row['firstName'] + ',';
             $result += $row['lastName'] + ',';
             $result += $row['address'] + ',';
