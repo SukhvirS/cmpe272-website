@@ -1,6 +1,6 @@
 <?php
     $data = array(
-        "USERNAME" => "admin",
+        "USERNAME" => "admidn",
         "PASSWORD" => "admin",
 
     );
