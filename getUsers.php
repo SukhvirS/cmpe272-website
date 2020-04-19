@@ -18,22 +18,22 @@
     if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_assoc($result)){
             // echo("<tr>");
-            echo($row["firstName"]);
-            echo(",");
-            echo($row["lastName"]);
-            echo(",");
-            echo($row["address"]);
-            echo(",");
-            echo($row["email"]);
-            echo(",");
-            echo($row["homePhone"]);
-            echo(",");
-            $allUsers += $row['firstName'].',';
-            $allUsers += $row['lastName'].',';
-            $allUsers += $row['address'].',';
-            $allUsers += $row['email'].',';
-            $allUsers += $row['homePhone'].',';
-            $allUsers += $row['cellPhone'].',';
+            // echo($row["firstName"]);
+            // echo(",");
+            // echo($row["lastName"]);
+            // echo(",");
+            // echo($row["address"]);
+            // echo(",");
+            // echo($row["email"]);
+            // echo(",");
+            // echo($row["homePhone"]);
+            // echo(",");
+            $allUsers .= $row['firstName'].',';
+            $allUsers .= $row['lastName'].',';
+            $allUsers .= $row['address'].',';
+            $allUsers .= $row['email'].',';
+            $allUsers .= $row['homePhone'].',';
+            $allUsers .= $row['cellPhone'].',';
             // echo("<th scope='row'>".$row["customerID"]."</th>");
             // echo("<td>".$row["firstName"]."</td>");
             // echo("<td>".$row["lastName"]."</td>");
@@ -47,5 +47,5 @@
     }
 
     mysqli_close($link);
-    // echo($allUsers);
+    echo($allUsers);
 ?>
