@@ -27,6 +27,5 @@
     }
 
     mysqli_close($link);
-    $result = "test";
     echo($result);
 ?>
