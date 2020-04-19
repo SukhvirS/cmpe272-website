@@ -29,22 +29,22 @@
         while($row = mysqli_fetch_assoc($result)){
             // echo("<tr>");
             echo($row["firstName"]);
-            echo("<br>");
+            // echo("<br>");
             echo($row["lastName"]);
-            echo("<br>");
+            // echo("<br>");
             echo($row["address"]);
-            echo("<br>");
+            // echo("<br>");
             echo($row["email"]);
-            echo("<br>");
+            // echo("<br>");
             echo($row["homePhone"]);
             echo("<br>");
-            echo("<th scope='row'>".$row["customerID"]."</th>");
-            echo("<td>".$row["firstName"]."</td>");
-            echo("<td>".$row["lastName"]."</td>");
-            echo("<td>".$row["address"]."</td>");
-            echo("<td>".$row["email"]."</td>");
-            echo("<td>".$row["homePhone"]."</td>");
-            echo("<td>".$row["cellPhone"]."</td>");
+            // echo("<th scope='row'>".$row["customerID"]."</th>");
+            // echo("<td>".$row["firstName"]."</td>");
+            // echo("<td>".$row["lastName"]."</td>");
+            // echo("<td>".$row["address"]."</td>");
+            // echo("<td>".$row["email"]."</td>");
+            // echo("<td>".$row["homePhone"]."</td>");
+            // echo("<td>".$row["cellPhone"]."</td>");
             // echo("</tr>");
           }
         mysqli_free_result($result);
