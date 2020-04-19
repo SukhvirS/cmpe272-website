@@ -5,6 +5,9 @@
         header("location: login.php");
         exit;
     }
+    else{
+        header("location: getUsers.php");
+    }
 
     require_once('config.php');
 
@@ -24,5 +27,6 @@
     }
 
     mysqli_close($link);
+    $result = "test";
     echo($result);
 ?>
