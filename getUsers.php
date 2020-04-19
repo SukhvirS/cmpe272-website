@@ -16,22 +16,27 @@
     $count = 1;
 
     if($result = mysqli_query($link, $sql)){
+        // while($row = mysqli_fetch_assoc($result)){
+        //     $result += $row["firstName"].',';
+        //     $result += $row["lastName"].',';
+        //     $result += $row["address"].',';
+        //     $result += $row["email"].',';
+        //     $result += $row["homePhone"].',';
+        //     $result += $row["cellPhone"].',';
+        //     echo($count."---");
+        //     $count += 1;
+        // }
         while($row = mysqli_fetch_assoc($result)){
-            echo($row);
-            // echo($row['firstName']);
-            // echo($row['lastName']);
-            // echo($row['address']);
-            // echo($row['email']);
-            // echo($row['cellPhone']);
-            $result += $row["firstName"].',';
-            $result += $row["lastName"].',';
-            $result += $row["address"].',';
-            $result += $row["email"].',';
-            $result += $row["homePhone"].',';
-            $result += $row["cellPhone"].',';
-            echo($count."---");
-            $count += 1;
-        }
+            echo("<tr>");
+            echo("<th scope='row'>".$row["customerID"]."</th>");
+            echo("<td>".$row["firstName"]."</td>");
+            echo("<td>".$row["lastName"]."</td>");
+            echo("<td>".$row["address"]."</td>");
+            echo("<td>".$row["email"]."</td>");
+            echo("<td>".$row["homePhone"]."</td>");
+            echo("<td>".$row["cellPhone"]."</td>");
+            echo("</tr>");
+          }
         mysqli_free_result($result);
     }
 
