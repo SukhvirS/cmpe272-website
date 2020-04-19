@@ -1,13 +1,13 @@
 <?php
-    session_start();
+    // session_start();
 
-    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-        header("location: login.php");
-        exit;
-    }
-    else{
-        $redirectToGetUsers = True;
-    }
+    // if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    //     header("location: login.php");
+    //     exit;
+    // }
+    // else{
+    //     $redirectToGetUsers = True;
+    // }
 
     require_once('config.php');
 
