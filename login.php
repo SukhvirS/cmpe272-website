@@ -4,6 +4,10 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to users page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    if($GLOBALS['redirectToGetUsers'] == True){
+        header("location: getUsers.php");
+        exit;
+    }
     header("location: users.php");
     exit;
 }
