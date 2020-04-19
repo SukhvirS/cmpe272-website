@@ -28,6 +28,16 @@
         // }
         while($row = mysqli_fetch_assoc($result)){
             // echo("<tr>");
+            echo($row["firstName"]);
+            echo("<br>");
+            echo($row["lastName"]);
+            echo("<br>");
+            echo($row["address"]);
+            echo("<br>");
+            echo($row["email"]);
+            echo("<br>");
+            echo($row["homePhone"]);
+            echo("<br>");
             echo("<th scope='row'>".$row["customerID"]."</th>");
             echo("<td>".$row["firstName"]."</td>");
             echo("<td>".$row["lastName"]."</td>");
