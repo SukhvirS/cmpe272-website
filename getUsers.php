@@ -22,16 +22,16 @@
             // echo($row['address']);
             // echo($row['email']);
             // echo($row['cellPhone']);
-            $result += $row['firstName'].',';
-            $result += $row['lastName'].',';
-            $result += $row['address'].',';
-            $result += $row['email'].',';
-            $result += $row['homePhone'].',';
-            $result += $row['cellPhone'].',';
+            $result += $row["firstName"].',';
+            $result += $row["lastName"].',';
+            $result += $row["address"].',';
+            $result += $row["email"].',';
+            $result += $row["homePhone"].',';
+            $result += $row["cellPhone"].',';
             echo($count."---");
             $count += 1;
         }
-        mysqli_free_result($result);
+        // mysqli_free_result($result);
     }
 
     mysqli_close($link);
