@@ -13,6 +13,7 @@
 
     $sql = "SELECT * FROM customers";
     $result = '';
+    $count = 1;
 
     if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_assoc($result)){
@@ -27,6 +28,8 @@
             $result += $row['email'].',';
             $result += $row['homePhone'].',';
             $result += $row['cellPhone'].',';
+            echo($count);
+            $count += 1;
         }
         mysqli_free_result($result);
     }
