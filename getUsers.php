@@ -17,6 +17,7 @@
 
     if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_assoc($result)){
+            echo($row);
             // echo($row['firstName']);
             // echo($row['lastName']);
             // echo($row['address']);
@@ -31,7 +32,7 @@
             echo($count."---");
             $count += 1;
         }
-        // mysqli_free_result($result);
+        mysqli_free_result($result);
     }
 
     mysqli_close($link);
