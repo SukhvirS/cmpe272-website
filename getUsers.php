@@ -27,7 +27,7 @@
         //     $count += 1;
         // }
         while($row = mysqli_fetch_assoc($result)){
-            echo("<tr>");
+            // echo("<tr>");
             echo("<th scope='row'>".$row["customerID"]."</th>");
             echo("<td>".$row["firstName"]."</td>");
             echo("<td>".$row["lastName"]."</td>");
@@ -35,7 +35,7 @@
             echo("<td>".$row["email"]."</td>");
             echo("<td>".$row["homePhone"]."</td>");
             echo("<td>".$row["cellPhone"]."</td>");
-            echo("</tr>");
+            // echo("</tr>");
           }
         mysqli_free_result($result);
     }
