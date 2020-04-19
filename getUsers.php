@@ -28,7 +28,7 @@
             $result += $row['email'].',';
             $result += $row['homePhone'].',';
             $result += $row['cellPhone'].',';
-            echo($count);
+            echo($count."---");
             $count += 1;
         }
         mysqli_free_result($result);
