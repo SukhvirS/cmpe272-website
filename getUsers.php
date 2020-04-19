@@ -12,7 +12,7 @@
     require_once('config.php');
 
     $sql = "SELECT * FROM customers";
-    $result = '';
+    $allUsers = '';
     $count = 1;
 
     if($result = mysqli_query($link, $sql)){
@@ -28,16 +28,22 @@
         // }
         while($row = mysqli_fetch_assoc($result)){
             // echo("<tr>");
-            echo($row["firstName"]);
+            // echo($row["firstName"]);
+            // // echo("<br>");
+            // echo($row["lastName"]);
+            // // echo("<br>");
+            // echo($row["address"]);
+            // // echo("<br>");
+            // echo($row["email"]);
+            // // echo("<br>");
+            // echo($row["homePhone"]);
             // echo("<br>");
-            echo($row["lastName"]);
-            // echo("<br>");
-            echo($row["address"]);
-            // echo("<br>");
-            echo($row["email"]);
-            // echo("<br>");
-            echo($row["homePhone"]);
-            echo("<br>");
+            $allUsers += $row['firstName'].',';
+            $allUsers += $row['lastName'].',';
+            $allUsers += $row['address'].',';
+            $allUsers += $row['email'].',';
+            $allUsers += $row['homePhone'].',';
+            $allUsers += $row['cellPhone'].',';
             // echo("<th scope='row'>".$row["customerID"]."</th>");
             // echo("<td>".$row["firstName"]."</td>");
             // echo("<td>".$row["lastName"]."</td>");
@@ -51,5 +57,5 @@
     }
 
     mysqli_close($link);
-    echo($result);
+    echo($allUsers);
 ?>
