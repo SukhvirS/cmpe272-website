@@ -28,12 +28,12 @@
             // echo(",");
             // echo($row["homePhone"]);
             // echo(",");
-            $allUsers .= $row['firstName'].',';
-            $allUsers .= $row['lastName'].',';
-            $allUsers .= $row['address'].',';
-            $allUsers .= $row['email'].',';
-            $allUsers .= $row['homePhone'].',';
-            $allUsers .= $row['cellPhone'].',';
+            $allUsers .= $row['firstName'].'+';
+            $allUsers .= $row['lastName'].'+';
+            $allUsers .= $row['address'].'+';
+            $allUsers .= $row['email'].'+';
+            $allUsers .= $row['homePhone'].'+';
+            $allUsers .= $row['cellPhone'].'+';
             // echo("<th scope='row'>".$row["customerID"]."</th>");
             // echo("<td>".$row["firstName"]."</td>");
             // echo("<td>".$row["lastName"]."</td>");
