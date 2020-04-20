@@ -28,7 +28,7 @@
         <title>All Users</title>
     </head>
     <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <h1>The Phone Company</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@
         } 
 
         ?>
-    </nav> -->
+    </nav>
         
     <div>
         <table class="table">
@@ -103,7 +103,7 @@
           </thead>
           <tbody>
             <?php
-            echo($result);
+                echo($nicolasUsers);
                 $ar1 = explode("\n", $result);
                 echo($ar1[0]);
                 echo("<br>");
