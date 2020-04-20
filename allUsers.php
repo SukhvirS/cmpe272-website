@@ -6,12 +6,7 @@
     );
 
     $ch = curl_init("http://cmpe272.nicolas-hanout.com/getUsers.php");
-    // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    // curl_setopt($ch, CURLOPT_POST, true);
-    // curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    // curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
     $nicolasUsers = curl_exec($ch);
     curl_close($ch);
 ?>

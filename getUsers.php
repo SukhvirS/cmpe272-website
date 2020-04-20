@@ -17,12 +17,12 @@
 
     if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_assoc($result)){
-            $allUsers .= $row['firstName'].'+';
-            $allUsers .= $row['lastName'].'+';
-            $allUsers .= $row['address'].'+';
-            $allUsers .= $row['email'].'+';
-            $allUsers .= $row['homePhone'].'+';
-            $allUsers .= $row['cellPhone'].'+';
+            $allUsers .= $row['firstName'].'|';
+            $allUsers .= $row['lastName'].'|';
+            $allUsers .= $row['address'].'|';
+            $allUsers .= $row['email'].'|';
+            $allUsers .= $row['homePhone'].'|';
+            $allUsers .= $row['cellPhone'].'|';
           }
         mysqli_free_result($result);
     }
