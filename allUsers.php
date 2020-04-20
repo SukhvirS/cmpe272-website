@@ -105,6 +105,7 @@
           </thead>
           <tbody>
             <?php
+            echo($result);
                 $ar1 = explode("\n", $result);
                 echo($ar1[0]);
                 echo("<br>");
