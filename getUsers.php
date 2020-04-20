@@ -22,7 +22,7 @@
             $allUsers .= $row['address'].'+';
             $allUsers .= $row['email'].'+';
             $allUsers .= $row['homePhone'].'+';
-            $allUsers .= $row['cellPhone'].'+';
+            $allUsers .= $row['cellPhone'].'\n';
           }
         mysqli_free_result($result);
     }
