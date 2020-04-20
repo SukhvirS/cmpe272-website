@@ -5,12 +5,12 @@
 
     );
 
-    $ch = curl_init("http://cmpe272.nicolas-hanout.com/login.php");
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $ch = curl_init("http://cmpe272.nicolas-hanout.com/getUsers.php");
+    // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    // curl_setopt($ch, CURLOPT_POST, true);
+    // curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    // curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     $result = curl_exec($ch);
     curl_close($ch);
@@ -90,10 +90,39 @@
 
             ?>
         </nav>
-
-        <?php
-            echo $result;
-        ?>
+        
+        <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Home Phone</th>
+              <th scope="col">Cell Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+                $ar1 = explode("\n", $result);
+                $ar2 = Array();
+                foreach($ar1 as $el1){
+                    echo("<tr>");
+                    $ar2 = explode(",", $el1);
+                    foreach($ar2 as $el2){
+                        if($el2 != ''){
+                            echo("<td>".$el2."</td>");
+                        }
+                    }
+                }
+            ?>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
