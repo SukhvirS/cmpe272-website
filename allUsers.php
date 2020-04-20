@@ -100,6 +100,28 @@
           <tbody>
             <?php
                 $count = 1;
+
+                require_once('config.php');
+
+                $sql = "SELECT * FROM customers";
+
+                if($result = mysqli_query($link, $sql)){
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo("<tr>");
+                        echo("<th scope='row'>".$count."</th>");
+                        echo("<td>".$row["firstName"]."</td>");
+                        echo("<td>".$row["lastName"]."</td>");
+                        echo("<td>".$row["address"]."</td>");
+                        echo("<td>".$row["email"]."</td>");
+                        echo("<td>".$row["homePhone"]."</td>");
+                        echo("<td>".$row["cellPhone"]."</td>");
+                        echo("</tr>");
+                        $count += 1;
+                      }
+                    mysqli_free_result($result);
+                }
+                mysqli_close($link);
+
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($arr)-2);
                 for($i = 0; $i < count($ar); $i+= 6){
