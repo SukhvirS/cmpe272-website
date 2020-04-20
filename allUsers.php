@@ -100,16 +100,17 @@
           <tbody>
             <?php
                 $count = 1;
-                $ar1 = explode("|", $nicolasUsers);
-                for($i = 0; $i < count($ar1); $i+= 6){
+                $ar = explode("|", $nicolasUsers);
+                $ar = array_splice($ar, 0, count($arr)-2);
+                for($i = 0; $i < count($ar); $i+= 6){
                     echo("<tr>");
                     echo("<th scope='row'>".$count."</th>");
-                    echo("<td>".$ar1[$i]."</td>");
-                    echo("<td>".$ar1[$i+1]."</td>");
-                    echo("<td>".$ar1[$i+2]."</td>");
-                    echo("<td>".$ar1[$i+3]."</td>");
-                    echo("<td>".$ar1[$i+4]."</td>");
-                    echo("<td>".$ar1[$i+5]."</td>");
+                    echo("<td>".$ar[$i]."</td>");
+                    echo("<td>".$ar[$i+1]."</td>");
+                    echo("<td>".$ar[$i+2]."</td>");
+                    echo("<td>".$ar[$i+3]."</td>");
+                    echo("<td>".$ar[$i+4]."</td>");
+                    echo("<td>".$ar[$i+5]."</td>");
                     echo("</tr>");
                     $count += 1;
                 }
