@@ -113,22 +113,6 @@
                     echo("</tr>");
                     $count += 1;
                 }
-
-                // $ar2 = Array();
-                // foreach($ar1 as $key1 => $value1){
-                //     echo("<tr>");
-                //     echo("<th scope='row'>".$count."</th>");
-                //     $ar2 = explode("+", $value1);
-                //     foreach($ar2 as $key2 => $value2){
-                //         if($value2 != ''){
-                //             echo("<td>".$value2."</td>");
-                //         }
-                //         else{
-                //             echo("<td> </td>");
-                //         }
-                //     }
-                //     $count += 1;
-                // }
             ?>
             
           </tbody>
