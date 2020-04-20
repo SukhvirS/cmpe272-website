@@ -28,5 +28,5 @@
     }
 
     mysqli_close($link);
-    echo($allUsers);
+    print($allUsers);
 ?>
