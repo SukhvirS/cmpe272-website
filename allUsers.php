@@ -103,18 +103,21 @@
           </thead>
           <tbody>
             <?php
-                // $ar1 = explode(" ", $nicolasUsers);
-                // $ar2 = Array();
-                // foreach($ar1 as $el1){
-                //     echo("<tr>");
-                //     echo("<tr>".$el1."</tr>");
-                //     $ar2 = explode("+", $el1);
-                //     foreach($ar2 as $el2){
-                //         if($el2 != ''){
-                //             echo("<td>".$el2."</td>");
-                //         }
-                //     }
-                // }
+                $ar1 = explode(" ", $nicolasUsers);
+                $ar2 = Array();
+                foreach($ar1 as $el1){
+                    echo("<tr>");
+                    echo("<tr>".$el1."</tr>");
+                    $ar2 = explode("+", $el1);
+                    foreach($ar2 as $el2){
+                        if($el2 != ''){
+                            echo("<td>".$el2."</td>");
+                        }
+                        else{
+                            echo("<td> </td>");
+                        }
+                    }
+                }
             ?>
             
           </tbody>
