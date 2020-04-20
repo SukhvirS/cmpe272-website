@@ -103,8 +103,7 @@
           </thead>
           <tbody>
             <?php
-                echo($nicolasUsers);
-                $ar1 = explode("\n", $result);
+                $ar1 = explode(" ", $nicolasUsers);
                 echo($ar1[0]);
                 echo("<br>");
                 echo($ar1[0]);
