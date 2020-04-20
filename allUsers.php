@@ -100,22 +100,35 @@
           <tbody>
             <?php
                 $count = 1;
-                $ar1 = explode(" ", $nicolasUsers);
-                $ar2 = Array();
-                foreach($ar1 as $key1 => $value1){
+                $ar1 = explode("|", $nicolasUsers);
+                for($i = 0; $i < count($ar1); $i+= 6){
                     echo("<tr>");
                     echo("<th scope='row'>".$count."</th>");
-                    $ar2 = explode("+", $value1);
-                    foreach($ar2 as $key2 => $value2){
-                        if($value2 != ''){
-                            echo("<td>".$value2."</td>");
-                        }
-                        else{
-                            echo("<td> </td>");
-                        }
-                    }
+                    echo("<td>".$ar1[$i]."</td>");
+                    echo("<td>".$ar1[$i+1]."</td>");
+                    echo("<td>".$ar1[$i+2]."</td>");
+                    echo("<td>".$ar1[$i+3]."</td>");
+                    echo("<td>".$ar1[$i+4]."</td>");
+                    echo("<td>".$ar1[$i+5]."</td>");
+                    echo("</tr>");
                     $count += 1;
                 }
+
+                // $ar2 = Array();
+                // foreach($ar1 as $key1 => $value1){
+                //     echo("<tr>");
+                //     echo("<th scope='row'>".$count."</th>");
+                //     $ar2 = explode("+", $value1);
+                //     foreach($ar2 as $key2 => $value2){
+                //         if($value2 != ''){
+                //             echo("<td>".$value2."</td>");
+                //         }
+                //         else{
+                //             echo("<td> </td>");
+                //         }
+                //     }
+                //     $count += 1;
+                // }
             ?>
             
           </tbody>
