@@ -123,6 +123,11 @@
           </li>
         </ul>
 
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-item nav-link active" href="">Users (The Phone Company)</a>
+            <a class="nav-item nav-link" href="allUsers.php">All Users (All marketplaces)</a>
+        </nav>
+
         <div style="float: right">
           <span>
             <div style="width:425px">

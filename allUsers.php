@@ -101,6 +101,11 @@
           </li>
         </ul>
 
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-item nav-link" href="users.php">Users (The Phone Company)</a>
+            <a class="nav-item nav-link active" href="">All Users (All marketplaces)</a>
+        </nav>
+
         <br>
         <br>
 
