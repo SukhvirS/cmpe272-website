@@ -88,7 +88,7 @@
         <div style="margin: 10px 10px 0 10px">
             <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users (of all marketplaces)</h2>
             &nbsp;&nbsp;-&nbsp;&nbsp;
-            <h2><a href="users.php">Users</a></h2>
+            <a href="users.php" style="font-size: 300px">Users</a>
         </div>
         <br>
         <br>
