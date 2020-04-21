@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="products.php">Products</a>
@@ -44,7 +44,7 @@
             <a class="nav-link" href="about.php">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="users.php">Users</a>
+            <a class="nav-link active" href="users.php">Users</a>
             </li>
         </ul>
         </div>
@@ -90,6 +90,8 @@
             &nbsp;&nbsp;&nbsp;
             <a href="users.php">Users</a>
         </div>
+        <br>
+        <br>
 
         <table class="table">
           <thead>
