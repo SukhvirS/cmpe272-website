@@ -213,7 +213,7 @@
       <br>
       <br>
 
-      <div>
+      <div style="margin: 10px 10px 0 10px">
         <table class="table">
           <thead>
             <tr>
