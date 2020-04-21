@@ -119,7 +119,7 @@
             <a class="nav-link active" href="">Users (The Phone Company)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="allUsers.php">All Users (All Marketplaces)</a>
+            <a class="nav-link" href="allUsers.php">All Users (All marketplaces)</a>
           </li>
         </ul>
 
