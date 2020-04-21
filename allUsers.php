@@ -104,7 +104,7 @@
         <br>
         <br>
 
-        <table class="table">
+        <table class="table" style="padding: 0 0 -100px 0">
           <thead>
             <tr>
               <th scope="col">#</th>
