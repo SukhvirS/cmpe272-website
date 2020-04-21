@@ -110,19 +110,19 @@
       </nav>
 
       <div style="margin: 10px 10px 0 10px">
-        <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users (of The Phone Company)</h2>
-        &nbsp;&nbsp;-&nbsp;&nbsp;
+        <!-- <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users (of The Phone Company)</h2>
+        &nbsp;&nbsp;-&nbsp;&nbsp; -->
         <a href="allUsers.php">All users</a>
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="">Users</a>
+            <a class="nav-link active" href="">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="allUsers.php">All Users</a>
           </li>
         </ul>
-        
+
         <div style="float: right">
           <span>
             <div style="width:425px">
