@@ -90,6 +90,17 @@
             &nbsp;&nbsp;-&nbsp;&nbsp;
             <a href="users.php">Users</a>
         </div>
+
+
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="users.php">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="">All Users</a>
+          </li>
+        </ul>
+
         <br>
         <br>
 
