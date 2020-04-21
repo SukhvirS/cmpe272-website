@@ -94,7 +94,6 @@
     <div>
       <img id='home-image' src="./images/phones.png" alt="image" width="100%" style="padding: 40px 0 0 0">   
       </div>
-      <a href="allUsers.php">All users</a>
     </div>
     
     <script>

@@ -110,7 +110,9 @@
       </nav>
 
       <div style="margin: 10px 10px 0 10px">
-        <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users</h2>
+        <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users (of The Phone Company)</h2>
+        &nbsp;&nbsp;&nbsp;
+        <a href="allUsers.php">All users</a>
         <div style="float: right">
           <span>
             <div style="width:425px">
