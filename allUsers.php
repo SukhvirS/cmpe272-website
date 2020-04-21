@@ -85,6 +85,12 @@
     </nav>
         
     <div>
+        <div style="margin: 10px 10px 0 10px">
+            <h2 style="float: left; margin: 0; padding: 0 0 0 6px">Users (of all marketplaces)</h2>
+            &nbsp;&nbsp;&nbsp;
+            <a href="users.php">Users</a>
+        </div>
+
         <table class="table">
           <thead>
             <tr>
