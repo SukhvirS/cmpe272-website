@@ -116,10 +116,10 @@
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" href="">Users</a>
+            <a class="nav-link active" href="">Users (The Phone Company)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="allUsers.php">All Users</a>
+            <a class="nav-link" href="allUsers.php">All Users (All Marketplaces)</a>
           </li>
         </ul>
 

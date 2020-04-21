@@ -94,17 +94,17 @@
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="users.php">Users</a>
+            <a class="nav-link" href="users.php">Users (The Phone Company)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="">All Users</a>
+            <a class="nav-link active" href="">All Users (All marketplaces)</a>
           </li>
         </ul>
 
         <br>
         <br>
 
-        <table class="table" style="padding: 0 0 -100px 0">
+        <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
