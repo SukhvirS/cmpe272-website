@@ -163,6 +163,8 @@
                 }
                 $ar = explode("|", $masonUsers);
                 // $ar = array_splice($ar, 0, count($arr)-2);
+                print_r($masonUsers);
+                echo('<br>');
                 print_r($ar);
                 echo('0'.$ar[0]);
                 echo('-1.'.$ar[1]);
