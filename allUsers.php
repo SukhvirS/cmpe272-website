@@ -164,6 +164,7 @@
 
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
+                print_r($ar2);
                 echo("0".$ar2[0].'-');
                 echo('<br>');
                 echo("1".$ar2[2].'-');
@@ -176,6 +177,7 @@
                 echo('<br>');
                 echo("5".$ar2[6].'-');
                 echo('<br>');
+
                 for($i = 0; $i < count($ar2); $i+= 6){
                     if($i == 0){
                         echo("<tr>");
