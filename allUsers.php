@@ -162,7 +162,7 @@
                     $count += 1;
                 }
                 $ar = explode("|", $masonUsers);
-                $ar = array_splice($ar, 0, count($arr)-2);
+                // $ar = array_splice($ar, 0, count($arr)-2);
                 echo('0'.$ar[0]);
                 echo('-1.'.$ar[1]);
                 echo('-2.'.$ar[2]);
