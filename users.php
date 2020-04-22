@@ -210,7 +210,7 @@
       <br>
 
       <div style="margin: 0 10px 0 10px">
-        <table class="table">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
