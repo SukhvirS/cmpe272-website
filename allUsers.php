@@ -166,15 +166,15 @@
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
                 echo("0".$ar2[0].'-');
                 echo('<br>');
-                echo("1".$ar2[1].'-');
+                echo("1".$ar2[2].'-');
                 echo('<br>');
-                echo("2".$ar2[2].'-');
+                echo("2".$ar2[3].'-');
                 echo('<br>');
-                echo("3".$ar2[3].'-');
+                echo("3".$ar2[4].'-');
                 echo('<br>');
-                echo("4".$ar2[4].'-');
+                echo("4".$ar2[5].'-');
                 echo('<br>');
-                echo("5".$ar2[5].'-');
+                echo("5".$ar2[6].'-');
                 echo('<br>');
                 for($i = 0; $i < count($ar2); $i+= 6){
                     if($i == 0){
