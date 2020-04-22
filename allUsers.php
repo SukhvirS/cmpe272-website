@@ -103,6 +103,7 @@
         <br>
         <br>
 
+        <h2>The Phone Company's Users</h2>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -139,7 +140,57 @@
                 }
                 mysqli_close($link);
 
-                echo("<th>Users from SoftWorks</th>");
+                // // nicolas's users
+                // $ar = explode("|", $nicolasUsers);
+                // $ar = array_splice($ar, 0, count($ar)-1);
+                // for($i = 0; $i < count($ar); $i+= 6){
+                //     echo("<tr>");
+                //     echo("<th scope='row'>".$count."</th>");
+                //     echo("<td>".$ar[$i]."</td>");
+                //     echo("<td>".$ar[$i+1]."</td>");
+                //     echo("<td>".$ar[$i+2]."</td>");
+                //     echo("<td>".$ar[$i+3]."</td>");
+                //     echo("<td>".$ar[$i+4]."</td>");
+                //     echo("<td>".$ar[$i+5]."</td>");
+                //     echo("</tr>");
+                //     $count += 1;
+                // }
+
+                // // mason's users
+                // $ar2 = explode("|", $masonUsers);
+                // $ar2 = array_splice($ar2, 0, count($ar2)-1);
+                // for($i = 0; $i < count($ar2); $i+= 6){
+                //     echo("<tr>");
+                //     echo("<th scope='row'>".$count."</th>");
+                //     echo("<td>".$ar2[$i]."</td>");
+                //     echo("<td>".$ar2[$i+1]."</td>");
+                //     echo("<td>".$ar2[$i+2]."</td>");
+                //     echo("<td>".$ar2[$i+3]."</td>");
+                //     echo("<td>".$ar2[$i+4]."</td>");
+                //     echo("<td>".$ar2[$i+5]."</td>");
+                //     echo("</tr>");
+                //     $count += 1;
+                // }
+            ?>
+            
+          </tbody>
+        </table>
+
+        <h2>SoftWorks' Users</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Home Phone</th>
+              <th scope="col">Cell Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
                 // nicolas's users
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-1);
@@ -155,7 +206,25 @@
                     echo("</tr>");
                     $count += 1;
                 }
+            ?>      
+          </tbody>
+        </table>
 
+        <h2>Stonx's Users</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Home Phone</th>
+              <th scope="col">Cell Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
                 // mason's users
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-1);
@@ -171,10 +240,13 @@
                     echo("</tr>");
                     $count += 1;
                 }
+
             ?>
-            
+                        
           </tbody>
         </table>
+
+
       </div>
     </div>
 
