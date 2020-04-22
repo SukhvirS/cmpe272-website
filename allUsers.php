@@ -119,10 +119,9 @@
             <?php
                 $count = 1;
 
+                // my users
                 require_once('config.php');
-
                 $sql = "SELECT * FROM customers";
-
                 if($result = mysqli_query($link, $sql)){
                     while($row = mysqli_fetch_assoc($result)){
                         echo("<tr>");
@@ -140,6 +139,7 @@
                 }
                 mysqli_close($link);
 
+                // nicolas's users
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-1);
                 for($i = 0; $i < count($ar); $i+= 6){
@@ -155,6 +155,7 @@
                     $count += 1;
                 }
 
+                // mason's users
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-1);
                 for($i = 0; $i < count($ar2); $i+= 6){
