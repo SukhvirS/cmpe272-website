@@ -139,43 +139,12 @@
                     mysqli_free_result($result);
                 }
                 mysqli_close($link);
-
-                // // nicolas's users
-                // $ar = explode("|", $nicolasUsers);
-                // $ar = array_splice($ar, 0, count($ar)-1);
-                // for($i = 0; $i < count($ar); $i+= 6){
-                //     echo("<tr>");
-                //     echo("<th scope='row'>".$count."</th>");
-                //     echo("<td>".$ar[$i]."</td>");
-                //     echo("<td>".$ar[$i+1]."</td>");
-                //     echo("<td>".$ar[$i+2]."</td>");
-                //     echo("<td>".$ar[$i+3]."</td>");
-                //     echo("<td>".$ar[$i+4]."</td>");
-                //     echo("<td>".$ar[$i+5]."</td>");
-                //     echo("</tr>");
-                //     $count += 1;
-                // }
-
-                // // mason's users
-                // $ar2 = explode("|", $masonUsers);
-                // $ar2 = array_splice($ar2, 0, count($ar2)-1);
-                // for($i = 0; $i < count($ar2); $i+= 6){
-                //     echo("<tr>");
-                //     echo("<th scope='row'>".$count."</th>");
-                //     echo("<td>".$ar2[$i]."</td>");
-                //     echo("<td>".$ar2[$i+1]."</td>");
-                //     echo("<td>".$ar2[$i+2]."</td>");
-                //     echo("<td>".$ar2[$i+3]."</td>");
-                //     echo("<td>".$ar2[$i+4]."</td>");
-                //     echo("<td>".$ar2[$i+5]."</td>");
-                //     echo("</tr>");
-                //     $count += 1;
-                // }
             ?>
             
           </tbody>
         </table>
 
+        <br>
         <h2>SoftWorks' Users</h2>
         <table class="table table-striped">
           <thead>
@@ -191,7 +160,6 @@
           </thead>
           <tbody>
             <?php
-                // nicolas's users
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-1);
                 for($i = 0; $i < count($ar); $i+= 6){
@@ -210,6 +178,7 @@
           </tbody>
         </table>
 
+        <br>
         <h2>Stonx's Users</h2>
         <table class="table table-striped">
           <thead>
@@ -225,7 +194,6 @@
           </thead>
           <tbody>
             <?php
-                // mason's users
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-1);
                 for($i = 0; $i < count($ar2); $i+= 6){
@@ -241,11 +209,9 @@
                     $count += 1;
                 }
 
-            ?>
-                        
+            ?>     
           </tbody>
         </table>
-
 
       </div>
     </div>
