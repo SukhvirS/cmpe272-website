@@ -165,6 +165,7 @@
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
                 for($i = 0; $i < count($ar2); $i+= 6){
+                    echo('test');
                     if($i == 0){
                         echo("<tr>");
                         echo("<th scope='row'>".$count."</th>");
