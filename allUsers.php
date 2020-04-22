@@ -149,6 +149,10 @@
 
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-2);
+                print_r($nicolasUsers);
+                echo('<br>');
+                echo('<br>');
+                print_r($ar);
                 for($i = 0; $i < count($ar); $i+= 6){
                     echo("<tr>");
                     echo("<th scope='row'>".$count."</th>");
@@ -161,6 +165,7 @@
                     echo("</tr>");
                     $count += 1;
                 }
+                echo('<br><br>-----');
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
                 print_r($masonUsers);
