@@ -139,6 +139,7 @@
                 }
                 mysqli_close($link);
 
+                echo("<th scope='row'>Users from SoftWorks</th>");
                 // nicolas's users
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-1);
