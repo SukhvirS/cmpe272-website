@@ -169,11 +169,11 @@
                         echo("<tr>");
                         echo("<th scope='row'>".$count."</th>");
                         echo("<td>".$ar2[$i]."</td>");
-                        echo("<td>".$ar2[$i+1]."</td>");
                         echo("<td>".$ar2[$i+2]."</td>");
                         echo("<td>".$ar2[$i+3]."</td>");
                         echo("<td>".$ar2[$i+4]."</td>");
                         echo("<td>".$ar2[$i+5]."</td>");
+                        echo("<td>".$ar2[$i+6]."</td>");
                         echo("</tr>");
                         $count += 1;
                     }
