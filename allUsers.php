@@ -149,10 +149,6 @@
 
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-2);
-                print_r($nicolasUsers);
-                echo('<br>');
-                echo('<br>');
-                print_r($ar);
                 for($i = 0; $i < count($ar); $i+= 6){
                     echo("<tr>");
                     echo("<th scope='row'>".$count."</th>");
@@ -165,7 +161,7 @@
                     echo("</tr>");
                     $count += 1;
                 }
-                echo('<br><br>-----');
+
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
                 print_r($masonUsers);
@@ -178,15 +174,15 @@
                 echo('-3.'.$ar2[3]);
                 echo('-4.'.$ar2[4]);
                 echo('-5.'.$ar2[5]);
-                // for($i = 0; $i < count($ar); $i+= 6){
+                // for($i = 0; $i < count($ar2); $i+= 6){
                 //     echo("<tr>");
                 //     echo("<th scope='row'>".$count."</th>");
-                //     echo("<td>".$ar[$i]."</td>");
-                //     echo("<td>".$ar[$i+1]."</td>");
-                //     echo("<td>".$ar[$i+2]."</td>");
-                //     echo("<td>".$ar[$i+3]."</td>");
-                //     echo("<td>".$ar[$i+4]."</td>");
-                //     echo("<td>".$ar[$i+5]."</td>");
+                //     echo("<td>".$ar2[$i]."</td>");
+                //     echo("<td>".$ar2[$i+1]."</td>");
+                //     echo("<td>".$ar2[$i+2]."</td>");
+                //     echo("<td>".$ar2[$i+3]."</td>");
+                //     echo("<td>".$ar2[$i+4]."</td>");
+                //     echo("<td>".$ar2[$i+5]."</td>");
                 //     echo("</tr>");
                 //     $count += 1;
                 // }
