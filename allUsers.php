@@ -163,12 +163,12 @@
                 }
                 $ar = explode("|", $masonUsers);
                 $ar = array_splice($ar, 0, count($arr)-2);
-                echo($ar[0]);
-                echo($ar[1]);
-                echo($ar[2]);
-                echo($ar[3]);
-                echo($ar[4]);
-                echo($ar[5]);
+                echo('0'.$ar[0]);
+                echo('-1.'.$ar[1]);
+                echo('-2.'.$ar[2]);
+                echo('-3.'.$ar[3]);
+                echo('-4.'.$ar[4]);
+                echo('-5.'.$ar[5]);
                 // for($i = 0; $i < count($ar); $i+= 6){
                 //     echo("<tr>");
                 //     echo("<th scope='row'>".$count."</th>");
