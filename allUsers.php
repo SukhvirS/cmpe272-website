@@ -139,7 +139,7 @@
                 }
                 mysqli_close($link);
 
-                echo("<th scope='row' class='text-center'>Users from SoftWorks</th>");
+                echo("<th scope='row' style='width:50px'>Users from SoftWorks</th>");
                 // nicolas's users
                 $ar = explode("|", $nicolasUsers);
                 $ar = array_splice($ar, 0, count($ar)-1);
