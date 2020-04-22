@@ -167,7 +167,7 @@
                 print_r($ar2);
                 echo("0".$ar2[0].'-');
                 echo('<br>');
-                echo("1".$ar2[0].'-');
+                echo("1".$ar2[1].'-');
                 echo('<br>');
                 echo("2".$ar2[3].'-');
                 echo('<br>');
