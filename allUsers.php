@@ -174,18 +174,18 @@
                 echo('-3.'.$ar2[3]);
                 echo('-4.'.$ar2[4]);
                 echo('-5.'.$ar2[5]);
-                // for($i = 0; $i < count($ar2); $i+= 6){
-                //     echo("<tr>");
-                //     echo("<th scope='row'>".$count."</th>");
-                //     echo("<td>".$ar2[$i]."</td>");
-                //     echo("<td>".$ar2[$i+1]."</td>");
-                //     echo("<td>".$ar2[$i+2]."</td>");
-                //     echo("<td>".$ar2[$i+3]."</td>");
-                //     echo("<td>".$ar2[$i+4]."</td>");
-                //     echo("<td>".$ar2[$i+5]."</td>");
-                //     echo("</tr>");
-                //     $count += 1;
-                // }
+                for($i = 0; $i < count($ar2); $i+= 6){
+                    echo("<tr>");
+                    echo("<th scope='row'>".$count."</th>");
+                    echo("<td>".$ar2[$i]."</td>");
+                    echo("<td>".$ar2[$i+1]."</td>");
+                    echo("<td>".$ar2[$i+2]."</td>");
+                    echo("<td>".$ar2[$i+3]."</td>");
+                    echo("<td>".$ar2[$i+4]."</td>");
+                    echo("<td>".$ar2[$i+5]."</td>");
+                    echo("</tr>");
+                    $count += 1;
+                }
             ?>
             
           </tbody>
