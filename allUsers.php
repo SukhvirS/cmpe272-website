@@ -148,7 +148,7 @@
                 mysqli_close($link);
 
                 $ar = explode("|", $nicolasUsers);
-                $ar = array_splice($ar, 0, count($arr)-2);
+                $ar = array_splice($ar, 0, count($ar)-2);
                 for($i = 0; $i < count($ar); $i+= 6){
                     echo("<tr>");
                     echo("<th scope='row'>".$count."</th>");
@@ -162,7 +162,7 @@
                     $count += 1;
                 }
                 $ar2 = explode("|", $masonUsers);
-                // $ar = array_splice($ar, 0, count($arr)-2);
+                $ar2 = array_splice($ar2, 0, count($ar2)-2);
                 print_r($masonUsers);
                 echo('<br>');
                 echo('<br>');
