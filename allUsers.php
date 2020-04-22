@@ -164,45 +164,17 @@
 
                 $ar2 = explode("|", $masonUsers);
                 $ar2 = array_splice($ar2, 0, count($ar2)-2);
-                print_r($ar2);
-                echo("0".$ar2[0].'-');
-                echo('<br>');
-                echo("1".$ar2[1].'-');
-                echo('<br>');
-                echo("2".$ar2[3].'-');
-                echo('<br>');
-                echo("3".$ar2[4].'-');
-                echo('<br>');
-                echo("4".$ar2[5].'-');
-                echo('<br>');
-                echo("5".$ar2[6].'-');
-                echo('<br>');
-
                 for($i = 0; $i < count($ar2); $i+= 6){
-                    if($i == 0){
-                        echo("<tr>");
-                        echo("<th scope='row'>".$count."</th>");
-                        echo("<td>".$ar2[$i]."</td>");
-                        echo("<td>".$ar2[$i+2]."</td>");
-                        echo("<td>".$ar2[$i+3]."</td>");
-                        echo("<td>".$ar2[$i+4]."</td>");
-                        echo("<td>".$ar2[$i+5]."</td>");
-                        echo("<td>".$ar2[$i+6]."</td>");
-                        echo("</tr>");
-                        $count += 1;
-                    }
-                    else{
-                        echo("<tr>");
-                        echo("<th scope='row'>".$count."</th>");
-                        echo("<td>".$ar2[$i]."</td>");
-                        echo("<td>".$ar2[$i+1]."</td>");
-                        echo("<td>".$ar2[$i+2]."</td>");
-                        echo("<td>".$ar2[$i+3]."</td>");
-                        echo("<td>".$ar2[$i+4]."</td>");
-                        echo("<td>".$ar2[$i+5]."</td>");
-                        echo("</tr>");
-                        $count += 1;
-                    }
+                    echo("<tr>");
+                    echo("<th scope='row'>".$count."</th>");
+                    echo("<td>".$ar2[$i]."</td>");
+                    echo("<td>".$ar2[$i+1]."</td>");
+                    echo("<td>".$ar2[$i+2]."</td>");
+                    echo("<td>".$ar2[$i+3]."</td>");
+                    echo("<td>".$ar2[$i+4]."</td>");
+                    echo("<td>".$ar2[$i+5]."</td>");
+                    echo("</tr>");
+                    $count += 1;
                 }
             ?>
             
