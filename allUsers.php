@@ -9,6 +9,12 @@
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $nicolasUsers = curl_exec($ch);
     curl_close($ch);
+
+    $ch = curl_init("http://masonqian.com/getUsers.php");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $masonUsers = curl_exec($ch);
+    curl_close($ch);
+
 ?>
 
 <!DOCTYPE html>
@@ -142,6 +148,20 @@
                 mysqli_close($link);
 
                 $ar = explode("|", $nicolasUsers);
+                $ar = array_splice($ar, 0, count($arr)-2);
+                for($i = 0; $i < count($ar); $i+= 6){
+                    echo("<tr>");
+                    echo("<th scope='row'>".$count."</th>");
+                    echo("<td>".$ar[$i]."</td>");
+                    echo("<td>".$ar[$i+1]."</td>");
+                    echo("<td>".$ar[$i+2]."</td>");
+                    echo("<td>".$ar[$i+3]."</td>");
+                    echo("<td>".$ar[$i+4]."</td>");
+                    echo("<td>".$ar[$i+5]."</td>");
+                    echo("</tr>");
+                    $count += 1;
+                }
+                $ar = explode("|", $masonUsers);
                 $ar = array_splice($ar, 0, count($arr)-2);
                 for($i = 0; $i < count($ar); $i+= 6){
                     echo("<tr>");
