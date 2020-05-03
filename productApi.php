@@ -25,7 +25,7 @@
     echo("<br>");
     echo($row['description']);
     echo("<br>");
-    echo($row['price']);
+    echo(substr($row['price'],1));
     echo("<br>");
     echo("each");
     echo("<br>");
