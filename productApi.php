@@ -4,14 +4,16 @@
     $currentUrl .= $_SERVER['REQUEST_URI'];
     echo('url:'.$currentUrl);
     
-    $indexInURL = strpos($currentUrl, 'index') + 6;
-    $index = substr($currentUrl, $indexInURL);
-    $index = intval($index);
+    $indexInURL = strpos($currentUrl, 'id');
+    echo("index of id:".$indexInURL);
 
-    $sql = "SELECT * FROM products WHERE productID = '$index'";
-    $result = mysqli_query($link, $sql);
-    $row = mysqli_fetch_assoc($result);
+    // $index = substr($currentUrl, $indexInURL);
+    // $index = intval($index);
 
-    echo($row['name']);
+    // $sql = "SELECT * FROM products WHERE productID = '$index'";
+    // $result = mysqli_query($link, $sql);
+    // $row = mysqli_fetch_assoc($result);
+
+    // echo($row['name']);
 
 ?>
