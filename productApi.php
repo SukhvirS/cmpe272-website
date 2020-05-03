@@ -2,6 +2,8 @@
     $currentUrl = 'https://';
     $currentUrl .= $_SERVER['HTTP_HOST'];
     $currentUrl .= $_SERVER['REQUEST_URI'];
+    echo('url:'.$currentUrl);
+    
     $indexInURL = strpos($currentUrl, 'index') + 6;
     $index = substr($currentUrl, $indexInURL);
     $index = intval($index);
