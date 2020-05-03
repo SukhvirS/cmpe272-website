@@ -9,7 +9,7 @@
     echo("index of id:".$indexInURL);
     echo("<br>");
 
-    echo(substr($currentUrl, $indexInURL));
+    echo(substr($currentUrl, ($indexInURL+3)));
 
     // $index = substr($currentUrl, $indexInURL);
     // $index = intval($index);
